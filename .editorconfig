@@ -6,6 +6,9 @@ root=true
 [*]
 charset = utf-8
 end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
 max_line_length = 100
 
 # For all projects
@@ -16,8 +19,27 @@ indent_size = 4
 tab_width = 4
 
 [*.json]
-indent_style = tab
 indent_size = 2
 tab_width = 2
 
 # For the project
+# * Project with ts, js, html, css, scss *
+# JavaScript y TypeScript
+[*.js]
+indent_size = 2
+quote_type = single
+
+[*.ts]
+indent_size = 2
+quote_type = single
+
+# HTML
+[*.html]
+indent_size = 2
+
+# CSS / SCSS
+[*.css]
+indent_size = 2
+
+[*.ccss]
+indent_size = 2
