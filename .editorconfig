@@ -41,5 +41,5 @@ indent_size = 2
 [*.css]
 indent_size = 2
 
-[*.ccss]
+[*.scss]
 indent_size = 2

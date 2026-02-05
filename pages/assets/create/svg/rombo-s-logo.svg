@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="gradient-1" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(145, 145, 145);"/>
+      <stop offset="0.5" style="stop-color: rgb(255, 255, 255);"/>
+      <stop offset="1" style="stop-color: rgb(161, 161, 161);"/>
+    </linearGradient>
+    <linearGradient id="gradient-1-0" href="#gradient-1" gradientUnits="userSpaceOnUse" x1="64" y1="32" x2="64" y2="96"/>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="63.843" y1="0" x2="63.843" y2="128" id="gradient-0" gradientTransform="matrix(0.516802, -0.856105, 0.216934, 0.130956, 3.238219, 165.893939)">
+      <stop offset="0" style="stop-color: rgb(5.8824% 5.8824% 7.0588%)"/>
+      <stop offset="1" style="stop-color: rgb(3.6632% 3.6632% 5.188%)"/>
+    </linearGradient>
+    <style bx:fonts="Allerta Stencil">@import url(https://fonts.googleapis.com/css2?family=Allerta+Stencil%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+    <linearGradient id="gradient-4" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(255, 2, 2);"/>
+      <stop offset="0.5" style="stop-color: rgb(255, 255, 255);"/>
+      <stop offset="1" style="stop-color: rgb(255, 0, 0);"/>
+    </linearGradient>
+    <linearGradient id="gradient-6" bx:pinned="true">
+      <stop style="stop-color: rgb(2, 253, 255);" offset="0"/>
+      <stop style="stop-color: rgb(255, 255, 255);" offset="0.5"/>
+      <stop style="stop-color: rgb(0, 240, 255);" offset="1"/>
+    </linearGradient>
+    <linearGradient id="gradient-3" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(253, 0, 0);"/>
+      <stop offset="1" style="stop-color: rgb(167, 0, 0);"/>
+    </linearGradient>
+    <linearGradient id="gradient-5" bx:pinned="true">
+      <stop style="stop-color: rgb(0, 253, 248);" offset="0"/>
+      <stop style="stop-color: rgb(0, 162, 167);" offset="1"/>
+    </linearGradient>
+    <linearGradient id="gradient-6-0" href="#gradient-6" gradientUnits="userSpaceOnUse" x1="64" y1="6.5" x2="64" y2="121.5"/>
+    <linearGradient id="gradient-5-0" href="#gradient-5" gradientUnits="userSpaceOnUse" x1="57.25" y1="0" x2="57.25" y2="96"/>
+  </defs>
+  <rect width="128" height="128" rx="32" style="fill: url(&quot;#gradient-0&quot;);"/>
+  <circle cx="64" cy="64" r="57.5" stroke-width="4" fill="none" style="stroke-width: 4; stroke: url(&quot;#gradient-6-0&quot;);"/>
+  <path style="stroke-width: 1; stroke: rgb(15, 15, 18); stroke-opacity: 0; transform-origin: 71px 80px; fill: rgb(0, 0, 0);" d="M 78 32 L 51 96 L 64.5 128 L 85 92 L 74 96 L 91.5 64 L 78 32 Z" transform="matrix(-1, 0, 0, -1, 0.000008, -0.000011)"/>
+  <path style="stroke: rgb(15, 15, 18); stroke-opacity: 0; fill: url(&quot;#gradient-5-0&quot;);" d="M 64 0 L 37 64 L 50.5 96 L 71 60 L 60 64 L 77.5 32 L 64 0 Z"/>
+  <path style="opacity: 0.75; stroke: url(&quot;#gradient-1-0&quot;);" d="M 50.5 96 L 71 60 L 60 64 L 77.5 32"/>
+  <path style="stroke: rgb(15, 15, 18);" d="M 64 0 L 37 64 L 64 128 L 91 64 L 64 0 Z"/>
+  <text style="fill: rgb(255, 255, 255); fill-opacity: 0.65; font-family: &quot;Allerta Stencil&quot;; font-size: 80px; white-space: pre;" x="42.828" y="95.417">S</text>
+</svg>
