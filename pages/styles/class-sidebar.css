@@ -134,3 +134,28 @@ p {
   cursor: pointer;
   font: inherit;
 }
+
+/* extra */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+iframe {
+  min-height: 300px; /* Ajusta según lo que necesites */
+  border: none;
+}
+footer {
+  /* Opcional: estilos para el footer */
+}
