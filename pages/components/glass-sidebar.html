@@ -7,8 +7,98 @@
   <link rel="icon" type="image/svg+xml" href="../public/favicon.svg" />
   <link rel="icon" href="../public/favicon.ico" />
   <link rel="stylesheet" href="../styles/global.css" />
-  <link rel="stylesheet" href="../styles/glass-sidebar.css" />
   <title>Home</title>
+  <style>
+    /* Glass Sidebar Styles */
+    #sidebar {
+      box-sizing: border-box;
+      height: 100vh;
+      width: 250px;
+      padding: 5px 1em;
+
+      background: var(--base-clr);
+      border-right: 1px solid var(--line-clr);
+
+      /* position: fixed; */
+
+      position: sticky;
+      top: 0;
+      align-self: start;
+    }
+
+    #sidebar ul {
+      list-style: none;
+    }
+
+    #sidebar>ul>li:first-child {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: flex-end;
+
+      .logo {
+        font-weight: 600;
+      }
+    }
+
+    #sidebar ul li.active a {
+      color: var(--accent-clr);
+
+      img {
+        fill: var(--accent-clr);
+      }
+    }
+
+    /* decoracion estetica basica. desplegable y resaltar al pasar sobre boton */
+    #sidebar img {
+      flex-shrink: 0;
+      fill: var(--text-clr);
+    }
+
+    #sidebar a span,
+    #sidebar .dropdown-btn span {
+      flex-grow: 1;
+    }
+
+    #sidebar a:hover,
+    #sidebar .dropdown-btn:hover {
+      background-color: var(--hover-clr);
+    }
+
+    #sidebar .sub-menu {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: 300ms ease-in-out;
+
+      >div {
+        overflow: hidden;
+      }
+    }
+
+    #sidevar .sub-menu.show {
+      grid-template-rows: 0fr;
+    }
+
+    #sidebar a,
+    #sidebar .dropdown-btn,
+    #sidebar .logo {
+      border-radius: 0.5em;
+      padding: 0.85em;
+      text-decoration: none;
+      color: var(--text-clr);
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font: inherit;
+    }
+  </style>
 </head>
 
 <!-- <body> -->
@@ -61,20 +151,5 @@
     </li>
   </ul>
 </nav>
-
-<!-- <main>
-    <div class="container">
-      <h2>Hello world</h1>
-        <p>Esto es un parrafo de prueba</p>
-    </div>
-
-    <div class="container">
-      <h2>Hello world 2</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
-          accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores atque
-          odit, tenetur maxime.</p>
-    </div>
-  </main> -->
-<!-- </body> -->
 
 </html>
