@@ -21,6 +21,7 @@
 html {
   font-family: Poppins, 'Sogeo Ui', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5rem;
+  min-height: 100vh;
 }
 
 body {
@@ -30,8 +31,8 @@ body {
   background-color: var(--base-clr);
   color: var(--text-clr);
 
-  display: grid;
-  grid-template-columns: auto 1fr;
+  /* display: grid;
+  grid-template-columns: auto 1fr; */
 }
 
 main {
@@ -39,15 +40,19 @@ main {
 }
 main p {
   color: var(--secundary-text-clr);
+  /* margin-bottom: 15px; */
+  /* margin-top: 5px; */
+}
+
+.main-container {
   margin-bottom: 15px;
   margin-top: 5px;
 }
-
 .container {
   border: 1px solid var(--line-clr);
   border-radius: 1em;
-  padding: min(3em, 15%);
-  margin-bottom: 20px;
+  /* padding: min(3em, 15%); */
+  /* margin-bottom: 20px; */
 }
 
 h2,

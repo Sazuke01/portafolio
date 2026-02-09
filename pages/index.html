@@ -13,7 +13,7 @@
     iframe {
       height: 100%;
       width: 100%;
-      /* border: none; */
+      border: none;
     }
 
     .layout-grid {
@@ -22,9 +22,8 @@
     }
 
     header {
-      top: 0;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 10px;
+      margin-top: 0;
       position: sticky;
     }
 
@@ -41,9 +40,8 @@
     }
 
     footer {
-      bottom: 0;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 10px;
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -61,7 +59,7 @@
       </header>
 
       <main>
-        <iframe src="components/content.html" title="Contenido"></iframe>
+        <iframe src="components/content.html" title="Contenido" display="block"></iframe>
       </main>
 
       <footer>
