@@ -11,19 +11,22 @@
   <title>Portafolio</title>
   <style>
     iframe {
+      /* display: block; */
       height: 100%;
       width: 100%;
-      border: none;
+      /* border: none; */
     }
 
     .layout-grid {
       display: grid;
       grid-template-columns: 250px 1fr;
+      height: 100vh;
     }
 
     header {
       margin: 10px;
       margin-top: 0;
+      height: 100px;
       position: sticky;
     }
 
@@ -42,6 +45,7 @@
     footer {
       margin: 10px;
       margin-bottom: 0;
+      height: 100px;
     }
   </style>
 </head>
@@ -59,7 +63,7 @@
       </header>
 
       <main>
-        <iframe src="components/content.html" title="Contenido" display="block"></iframe>
+        <iframe src="components/content.html" title="Contenido"></iframe>
       </main>
 
       <footer>
