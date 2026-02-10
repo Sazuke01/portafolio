@@ -1,17 +1,8 @@
 /* Global Styles */
+@import url('./theme.css');
+/* @import url('./theme-dark.css'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --base-clr: #11121a;
-  --line-clr: #42434a;
-
-  --hover-clr: #222533;
-  --accent-clr: #5e63ff;
-
-  --text-clr: #e6e6ef;
-  --secondary-text-clr: #b0b3c1;
-}
 
 * {
   margin: 0;
@@ -31,6 +22,9 @@ body {
 
   background-color: var(--base-clr);
   color: var(--text-clr);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 main {
@@ -41,11 +35,6 @@ main p {
   color: var(--secundary-text-clr);
   margin-bottom: 15px;
   margin-top: 5px;
-}
-
-h2,
-p {
-  margin-top: 1em;
 }
 
 /* ! Clases  */
@@ -59,11 +48,30 @@ p {
 /* TODO */
 
 /*
- * En el selector `.main-content > main` se usa el combinador `>` para aplicar estilos
- * únicamente a los elementos `main` que son hijos directos de `.main-content`,
- * evitando afectar descendientes más profundos.
- *
- * La coma en `h2, p` agrupa selectores independientes para aplicarles las mismas reglas;
- * en cambio, `main p` es un selector descendiente que significa “p dentro de main”,
- * por eso no lleva coma.
+* sin nada, inicia con ".", inicia con "#":
+  Cuando incia sin nada seleciona todos los elementos de ese tipo.
+  Cuando inicia con "." seleciona todos los elementos que tienen esa clase.
+  Cuando inicia con "#" seleciona el elemento que tiene ese ID.
+
+* Clase vs id:
+  Una clase (.) puede aplicarse a múltiples elementos, mientras que un ID (#) debe ser único en la página.
+  Las clases son ideales para estilos reutilizables, mientras que los IDs son útiles para identificar elementos específicos.
+
+* Cuando se usa (padre)>(hijo):
+  En el selector `.main-content > main` se usa el combinador `>` para aplicar estilos
+  únicamente a los elementos `main` que son hijos directos de `.main-content`,
+  evitando afectar descendientes más profundos.
+
+ * Cuando usa (selector1, selector2):
+  La coma en `h2, p` agrupa selectores independientes para aplicarles las mismas reglas;
+  en cambio, `main p` es un selector descendiente que significa “p dentro de main”,
+  por eso no lleva coma.
+
+ * Diferencia entre 100vh y 100dvh
+ 100vh:
+  Es el 100% de la altura de la ventana gráfica (viewport height).
+  Problema: En móviles, puede incluir la barra de direcciones, lo que a veces causa saltos o recortes.
+  100dvh:
+  Es el 100% de la altura dinámica de la ventana gráfica, excluyendo barras del navegador (más preciso en móviles modernos).
+
  */

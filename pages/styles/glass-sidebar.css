@@ -1,4 +1,6 @@
 /* Glass Sidebar Styles */
+@import url('./theme.css');
+
 #sidebar {
   box-sizing: border-box;
   height: 100vh;
@@ -9,14 +11,28 @@
   border-right: 1px solid var(--line-clr);
 
   /* position: fixed; */
+  /* left: 0;
+      z-index: 1000; */
 
   position: sticky;
-  top: 0;
   align-self: start;
+
+  top: 0;
 }
+
 #sidebar ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.bottom-button {
+  margin-top: auto;
+}
+
 #sidebar > ul > li:first-child {
   margin-bottom: 16px;
   display: flex;
@@ -40,14 +56,17 @@
   flex-shrink: 0;
   fill: var(--text-clr);
 }
+
 #sidebar a span,
 #sidebar .dropdown-btn span {
   flex-grow: 1;
 }
+
 #sidebar a:hover,
 #sidebar .dropdown-btn:hover {
   background-color: var(--hover-clr);
 }
+
 #sidebar .sub-menu {
   display: grid;
   grid-template-rows: 0fr;
@@ -57,6 +76,7 @@
     overflow: hidden;
   }
 }
+
 #sidevar .sub-menu.show {
   grid-template-rows: 0fr;
 }

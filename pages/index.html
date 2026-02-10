@@ -7,7 +7,6 @@
   <link rel="icon" type="image/svg+xml" href=".public/favicon.svg" />
   <link rel="icon" href="./public/favicon.ico" />
   <link rel="stylesheet" href="./styles/global.css" />
-  <meta name="generator" content="{Astro.generator}" />
   <title>Portafolio</title>
   <style>
     iframe {
@@ -17,75 +16,48 @@
     }
 
     header {
-      position: sticky;
       margin: 10px;
-      /* margin-top: 1; */
+      top: 0;
       height: 100px;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     footer {
       margin: 10px;
-      margin-bottom: 0;
+      bottom: 0;
       height: 100px;
     }
 
-    /* Division de elementos */
-    .layout-grid {
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      /* grid-template-columns: auto 1fr; */
+    .sidebar {
+      box-sizing: border-box;
+      height: 100vh;
+      width: 250px;
+
+      position: sticky;
+      top: 0;
+      align-self: start;
     }
   </style>
 </head>
 
 <body>
-  <div class="layout-grid">
-    <nav>
-      <iframe src="components/glass-sidebar.html" title="Sidebar"></iframe>
-    </nav>
 
-    <div class="main-content">
+  <nav class="sidebar">
+    <iframe src="components/glass-sidebar.html" title="Sidebar"></iframe>
+  </nav>
 
-      <header height="10px">
-        <iframe src="components/header.html" title="Header del sitio"></iframe>
-      </header>
+  <div class="main-content">
 
-      <main>
-        <iframe src="components/content.html" title="Contenido"></iframe>
+    <header height="10px">
+      <iframe src="components/header.html" title="Header del sitio"></iframe>
+    </header>
 
-        <div class="container">
-          <h2>Hello world 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
-              accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
-              atque
-              odit, tenetur maxime.</p>
-        </div>
+    <main>
+      <iframe src="components/content.html" title="Contenido"></iframe>
+    </main>
 
-        <div class="container">
-          <h2>Hello world 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
-              accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
-              atque
-              odit, tenetur maxime.</p>
-        </div>
-      </main>
-
-      <footer>
-        <iframe src="components/footer.html" title="Footer del sitio"></iframe>
-      </footer>
-    </div>
+    <footer>
+      <iframe src="components/footer.html" title="Footer del sitio"></iframe>
+    </footer>
   </div>
 
 </html>
