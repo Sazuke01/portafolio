@@ -18,6 +18,7 @@
   padding: 0;
 }
 
+/* ! Estructura basica de elementos */
 html {
   font-family: Poppins, 'Sogeo Ui', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5rem;
@@ -30,29 +31,16 @@ body {
 
   background-color: var(--base-clr);
   color: var(--text-clr);
-
-  /* display: grid;
-  grid-template-columns: auto 1fr; */
 }
 
 main {
   padding: min(30px, 7%);
 }
+
 main p {
   color: var(--secundary-text-clr);
-  /* margin-bottom: 15px; */
-  /* margin-top: 5px; */
-}
-
-.main-container {
   margin-bottom: 15px;
   margin-top: 5px;
-}
-.container {
-  border: 1px solid var(--line-clr);
-  border-radius: 1em;
-  /* padding: min(3em, 15%); */
-  /* margin-bottom: 20px; */
 }
 
 h2,
@@ -60,15 +48,22 @@ p {
   margin-top: 1em;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content > main {
-  flex: 1 1 auto;
-  min-height: 0;
+/* ! Clases  */
+.container {
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  padding: min(3em, 15%);
+  margin-bottom: 20px;
 }
 
 /* TODO */
+
+/*
+ * En el selector `.main-content > main` se usa el combinador `>` para aplicar estilos
+ * únicamente a los elementos `main` que son hijos directos de `.main-content`,
+ * evitando afectar descendientes más profundos.
+ *
+ * La coma en `h2, p` agrupa selectores independientes para aplicarles las mismas reglas;
+ * en cambio, `main p` es un selector descendiente que significa “p dentro de main”,
+ * por eso no lleva coma.
+ */

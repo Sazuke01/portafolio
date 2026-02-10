@@ -11,23 +11,16 @@
   <title>Portafolio</title>
   <style>
     iframe {
-      /* display: block; */
       height: 100%;
       width: 100%;
       /* border: none; */
     }
 
-    .layout-grid {
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      height: 100vh;
-    }
-
     header {
-      margin: 10px;
-      margin-top: 0;
-      height: 100px;
       position: sticky;
+      margin: 10px;
+      /* margin-top: 1; */
+      height: 100px;
     }
 
     body {
@@ -47,6 +40,13 @@
       margin-bottom: 0;
       height: 100px;
     }
+
+    /* Division de elementos */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      /* grid-template-columns: auto 1fr; */
+    }
   </style>
 </head>
 
@@ -64,6 +64,22 @@
 
       <main>
         <iframe src="components/content.html" title="Contenido"></iframe>
+
+        <div class="container">
+          <h2>Hello world 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
+              accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
+              atque
+              odit, tenetur maxime.</p>
+        </div>
+
+        <div class="container">
+          <h2>Hello world 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
+              accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
+              atque
+              odit, tenetur maxime.</p>
+        </div>
       </main>
 
       <footer>

@@ -3,17 +3,28 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <!-- <link rel="stylesheet" href="../styles/index.css" /> -->
+  <meta name="viewport" content="width=device-width, inicial-scale=1.0" />
   <link rel="stylesheet" href="../styles/global.css" />
-  <meta name="generator" content="{Astro.generator}" />
   <title>Footer</title>
+  <style>
+    .parent {
+      display: grid;
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
 
 <div>
-  <section>
-    <p>Informacion de contacto: correo@gmail.com</p>
-  </section>
+  <p>Informacion de contacto: correo@gmail.com</p>
 </div>
 
 </html>
