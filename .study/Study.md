@@ -76,3 +76,36 @@ GitHub Copilot: Aquí tienes un estudio y comparativa de las tecnologías mencio
 - **Shadcn** se puede usar en proyectos React/Next.js con Vite y Tailwind CSS.
 
 - **Flutter** es independiente y no se integra directamente con las otras tecnologías, pero es ideal para apps móviles y de escritorio.
+
+## css
+
+```css
+/*
+* sin nada, inicia con ".", inicia con "#":
+  Cuando incia sin nada seleciona todos los elementos de ese tipo.
+  Cuando inicia con "." seleciona todos los elementos que tienen esa clase.
+  Cuando inicia con "#" seleciona el elemento que tiene ese ID.
+
+* Clase vs id:
+  Una clase (.) puede aplicarse a múltiples elementos, mientras que un ID (#) debe ser único en la página.
+  Las clases son ideales para estilos reutilizables, mientras que los IDs son útiles para identificar elementos específicos.
+
+* Cuando se usa (padre)>(hijo):
+  En el selector `.main-content > main` se usa el combinador `>` para aplicar estilos
+  únicamente a los elementos `main` que son hijos directos de `.main-content`,
+  evitando afectar descendientes más profundos.
+
+ * Cuando usa (selector1, selector2):
+  La coma en `h2, p` agrupa selectores independientes para aplicarles las mismas reglas;
+  en cambio, `main p` es un selector descendiente que significa “p dentro de main”,
+  por eso no lleva coma.
+
+ * Diferencia entre 100vh y 100dvh
+ 100vh:
+  Es el 100% de la altura de la ventana gráfica (viewport height).
+  Problema: En móviles, puede incluir la barra de direcciones, lo que a veces causa saltos o recortes.
+  100dvh:
+  Es el 100% de la altura dinámica de la ventana gráfica, excluyendo barras del navegador (más preciso en móviles modernos).
+
+ */
+```
