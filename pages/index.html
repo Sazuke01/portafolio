@@ -1,88 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Sazuke01</title>
 
-  <title>Portafolio Sazuke01</title>
+    <meta name="description" content="Portafolio de Sazuke01, desarrollador web." />
+    <meta name="author" content="Sazuke01" />
+    <meta name="robots" content="index, follow" />
 
-  <meta name="description" content="Portafolio de Sazuke01, desarrollador web.">
-  <meta name="author" content="Sazuke01">
-  <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portafolio Sazuke01" />
+    <meta property="og:site_name" content="Portafolio Sazuke01" />
+    <meta property="og:description" content="Portafolio de desarrollador web" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./public/preview.png" />
+    <!-- <meta property="og:image" content="https://tudominio.com/public/preview.png"> -->
+    <meta property="og:url" content="https://tudominio.com/" />
 
-  <meta property="og:title" content="Portafolio Sazuke01">
-  <meta property="og:site_name" content="Portafolio Sazuke01">
-  <meta property="og:description" content="Portafolio de desarrollador web">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="./public/preview.png">
-  <!-- <meta property="og:image" content="https://tudominio.com/public/preview.png"> -->
-  <meta property="og:url" content="https://tudominio.com/">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portafolio Sazuke01" />
+    <meta name="twitter:description" content="Portafolio de desarrollador web" />
+    <meta name="twitter:image" content="https://tudominio.com/public/preview.png" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Portafolio Sazuke01">
-  <meta name="twitter:description" content="Portafolio de desarrollador web">
-  <meta name="twitter:image" content="https://tudominio.com/public/preview.png">
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <link rel="icon" href="./public/favicon.ico" />
+    <link rel="stylesheet" href="./styles/global.css" />
 
+    <style>
+      iframe {
+        height: 100%;
+        width: 100%;
+        /* border: none; */
+      }
 
-  <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
-  <link rel="icon" href="./public/favicon.ico">
-  <link rel="stylesheet" href="./styles/global.css">
+      header {
+        margin: 10px;
+        margin-top: 0;
+        height: 100px;
+      }
 
-  <style>
-    iframe {
-      height: 100%;
-      width: 100%;
-      /* border: none; */
-    }
+      footer {
+        margin: 10px;
+        margin-bottom: 0;
+        height: 100px;
+      }
 
-    header {
-      margin: 10px;
-      margin-top: 0;
-      height: 100px;
-    }
+      #sidebar-main {
+        box-sizing: border-box;
+        height: 100vh;
+        width: 250px;
 
-    footer {
-      margin: 10px;
-      margin-bottom: 0;
-      height: 100px;
-    }
+        grid-column: 1;
+        position: sticky;
+        align-self: start;
+        top: 0;
+      }
 
-    #sidebar-main {
-      box-sizing: border-box;
-      height: 100vh;
-      width: 250px;
+      header,
+      footer,
+      main {
+        grid-column: 2;
+      }
+    </style>
+  </head>
 
-      grid-column: 1;
-      position: sticky;
-      align-self: start;
-      top: 0;
-    }
+  <body>
+    <nav id="sidebar-main">
+      <iframe src="components/glass-sidebar.html" title="Sidebar"></iframe>
+    </nav>
 
-    header,
-    footer,
-    main {
-      grid-column: 2;
-    }
-  </style>
-</head>
+    <header>
+      <iframe src="components/header.html" title="Header del sitio"></iframe>
+    </header>
 
-<body>
+    <main>
+      <iframe src="components/content.html" title="Contenido"></iframe>
+    </main>
 
-  <nav id="sidebar-main">
-    <iframe src="components/glass-sidebar.html" title="Sidebar"></iframe>
-  </nav>
-
-  <header>
-    <iframe src="components/header.html" title="Header del sitio"></iframe>
-  </header>
-
-  <main>
-    <iframe src="components/content.html" title="Contenido"></iframe>
-  </main>
-
-  <footer>
-    <iframe src="components/footer.html" title="Footer del sitio"></iframe>
-  </footer>
-
+    <footer>
+      <iframe src="components/footer.html" title="Footer del sitio"></iframe>
+    </footer>
+  </body>
 </html>
