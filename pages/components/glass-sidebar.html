@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../styles/global.css">
 
 <style>
-  /* Glass Sidebar Styles */
   #sidebar {
     box-sizing: border-box;
     height: 100vh;
@@ -10,28 +9,17 @@
 
     background: var(--base-clr);
     border-right: 1px solid var(--line-clr);
-
-    /* position: fixed; */
-    /* left: 0;
-      z-index: 1000; */
-
-    /* position: sticky;
-    align-self: start;
-
-    top: 0; */
   }
 
   #sidebar ul {
     display: flex;
     flex-direction: column;
+
     height: 100%;
-    list-style: none;
     padding: 0;
     margin: 0;
-  }
 
-  .bottom-button {
-    margin-top: auto;
+    list-style: none;
   }
 
   #sidebar>ul>li:first-child {
@@ -68,6 +56,21 @@
     background-color: var(--hover-clr);
   }
 
+  #sidebar a,
+  #sidebar .logo,
+  #sidebar .dropdown-btn {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--text-clr);
+
+    border-radius: 0.5em;
+    padding: 0.85em;
+    gap: 1em;
+  }
+
+  /* Sub menu */
   #sidebar .sub-menu {
     display: grid;
     grid-template-rows: 0fr;
@@ -82,16 +85,9 @@
     grid-template-rows: 0fr;
   }
 
-  #sidebar a,
-  #sidebar .dropdown-btn,
-  #sidebar .logo {
-    border-radius: 0.5em;
-    padding: 0.85em;
-    text-decoration: none;
-    color: var(--text-clr);
-    display: flex;
-    align-items: center;
-    gap: 1em;
+  /* Botones */
+  .bottom-button {
+    margin-top: auto;
   }
 
   .dropdown-btn {

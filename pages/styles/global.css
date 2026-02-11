@@ -46,3 +46,27 @@ main p {
   padding: min(3em, 15%);
   margin-bottom: 20px;
 }
+
+hr {
+  border: 1px solid var(--line-clr);
+}
+
+.row {
+  display: flex;
+  padding: 15px;
+  gap: 1rem;
+
+  img {
+    align-items: center;
+  }
+}
+
+.row-e {
+  display: flex;
+  gap: 1rem;
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
