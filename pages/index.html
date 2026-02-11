@@ -34,47 +34,47 @@
 
       border: none;
       overflow: hidden;
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body {
+      min-height: 100vw;
     }
 
     #sidebar-main {
       grid-column: 1;
       grid-row: 1 / span 3;
+    }
 
-      box-sizing: border-box;
-      height: 100vw;
-      width: 250px;
+    #sidebar-main iframe {
+      grid-column: 1;
+      grid-row: 1 / span 3;
 
       position: sticky;
       align-self: start;
       top: 0;
+
+      min-height: 100vh;
+      width: 250.5px;
+      height: 100vh;
     }
 
-    header {
-      grid-column: 2;
-      grid-row: 1;
-
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 1px;
+    header iframe {
+      padding-bottom: 0;
+      height: 97.5px;
     }
 
     main {
-      min-height: 100vh;
-      grid-column: 2;
-      grid-row: 2;
-    }
-
-    footer {
-      grid-column: 2;
-      grid-row: 3;
-    }
-
-    /* main, */
-    header,
-    footer {
-      background: black;
       padding: 0;
-      margin: 0;
+      margin-top: 35px;
+    }
+
+    footer iframe {
+      background: black;
+
+      height: 109.5px;
     }
   </style>
 </head>
@@ -85,15 +85,15 @@
   </nav>
 
   <header>
-    <iframe src="components/header.html" title="Header del sitio" style="height: 119.5px"></iframe>
+    <iframe src="components/header.html" title="Header del sitio"></iframe>
   </header>
 
   <main>
-    <iframe src="components/content.html" title="Contenido" style="height: 103.5%;"></iframe>
+    <iframe src="components/content.html" title="Contenido"></iframe>
   </main>
 
   <footer>
-    <iframe src="components/footer.html" title="Footer del sitio" style="height: 109.5px;"></iframe>
+    <iframe src="components/footer.html" title="Footer del sitio"></iframe>
   </footer>
 </body>
 

@@ -26,168 +26,20 @@
 
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
   <link rel="icon" href="public/favicon.ico">
+
   <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/glass-sidebar.css">
+
+  <script src="src/main.js"></script>
 
   <style>
-    /* Glass Sidebar Styles */
-    #sidebar {
-      grid-row: 1 / span 3;
-      grid-column: 1;
-
-      box-sizing: border-box;
-      height: 100vh;
-      width: 250px;
-      padding: 5px 1em;
-
-      background-color: var(--base-clr);
-      border-right: 1px solid var(--line-clr);
-
-      position: sticky;
-      align-self: start;
-      top: 0;
-      /* transition: 300ms ease-in-out;
-      overflow: hidden;
-      text-wrap: nowrap;
-      */
-    }
-
-    #sidebar ul {
-      display: flex;
-      flex-direction: column;
-
-      height: 100%;
-      padding: 0;
-      margin: 0;
-
-      list-style: none;
-    }
-
-    #sidebar>ul>li:first-child {
-      margin-bottom: 16px;
-      display: flex;
-      justify-content: flex-end;
-
-      .logo {
-        font-weight: 600;
-      }
-    }
-
-    #sidebar ul li.active a {
-      color: var(--accent-clr);
-
-      img {
-        fill: var(--accent-clr);
-      }
-    }
-
-    /* decoracion estetica basica. desplegable y resaltar al pasar sobre boton */
-    #sidebar img {
-      flex-shrink: 0;
-      fill: var(--text-clr);
-    }
-
-    #sidebar a span,
-    #sidebar .dropdown-btn span {
-      flex-grow: 1;
-    }
-
-    #sidebar a:hover,
-    #sidebar .dropdown-btn:hover {
-      background-color: var(--hover-clr);
-    }
-
-    #sidebar a,
-    #sidebar .logo,
-    #sidebar .dropdown-btn {
-      display: flex;
-      align-items: center;
-
-      text-decoration: none;
-      color: var(--text-clr);
-
-      border-radius: 0.5em;
-      padding: 0.85em;
-      gap: 1em;
-    }
-
-    /* Sub menu */
-    #sidebar .sub-menu {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: 300ms ease-in-out;
-
-      >div {
-        overflow: hidden;
-      }
-    }
-
-    #sidebar .sub-menu.show {
-      grid-template-rows: 0fr;
-    }
-
-    /* Botones */
-    .bottom-button {
-      margin-top: auto;
-    }
-
-    .dropdown-btn {
-      width: 100%;
-      text-align: left;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    #toggle-btn {
-      margin-left: auto;
-      padding: 1em;
-      border: none;
-      border-radius: .5em;
-      background: none;
-      cursor: pointer;
-
-      svg {
-        transition: rotate 150ms ease;
-      }
-    }
-
-    #toggle-btn:hover {
-      background-color: var(--hover-clr);
-    }
-
     /* Body elements */
     header {
-      grid-column: 2;
-      grid-row: 1;
-
-      /* Interno */
-      background-color: black;
-
-      padding-top: 15px;
       padding-bottom: 15px;
-      padding-left: 1px;
-    }
-
-
-    main {
-      grid-column: 2;
-      grid-row: 2;
-
-      display: flex;
-      flex-direction: column;
-      /* box-sizing: border-box; */
-    }
-
-    footer {
-      grid-column: 2;
-      grid-row: 3;
     }
 
     .footer-content {
-      background: black;
       gap: 1rem;
-      padding: 15px;
     }
   </style>
 </head>
@@ -197,7 +49,7 @@
   <nav id="sidebar">
     <ul>
       <li>
-        <span class="logo">Logo</span>
+        <span onclick=toggleSidebar() class="logo">Logo</span>
         <button id="toggle-btn">
           <img src="icons/24dp/keyboard_double_arrow_left.svg">
         </button>
@@ -218,11 +70,9 @@
       </li>
 
       <li>
-        <button class="dropdown-btn">
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
           <img src="icons/24dp/add.svg">
-
           <span>Create</span>
-
           <img src="icons/24dp/keyboard_arrow_down.svg">
         </button>
 
@@ -246,14 +96,14 @@
 
   <header>
     <div class="header-container">
-      <div class="row">
+      <div class="row center">
         <img src="public/favicon.svg" width="32" alt="Icono">
         <h1>Portafolio personal</h1>
       </div>
 
       <hr>
 
-      <div class="row-e">
+      <div class="row-e center">
         <hr>
         <a href="index.html" target="_parent">Ir a inicio</a>
         <hr>
@@ -327,6 +177,10 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    console.log('Hola desde el script!');
+  </script>
 
 </body>
 
