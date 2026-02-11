@@ -35,8 +35,8 @@ main {
 
 main p {
   color: var(--secundary-text-clr);
-  margin-bottom: 15px;
-  margin-top: 5px;
+  /* margin-bottom: 15px;
+  margin-top: 5px; */
 }
 
 /* ! Clases  */
