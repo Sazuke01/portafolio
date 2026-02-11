@@ -30,9 +30,15 @@
   <style>
     iframe {
       height: 100%;
-      width: 100%;
+      width: 99%;
 
-      /* border: none; */
+      border: none;
+      overflow: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      /* min-width: 100vw; */
     }
 
     #sidebar-main {
@@ -40,8 +46,8 @@
       grid-row: 1 / span 3;
 
       box-sizing: border-box;
-      height: 100vh;
-      width: 250px;
+      height: 100vw;
+      width: 255px;
 
       position: sticky;
       align-self: start;
@@ -54,6 +60,7 @@
     }
 
     main {
+      min-height: 100vh;
       grid-column: 2;
       grid-row: 2;
     }
@@ -71,15 +78,15 @@
   </nav>
 
   <header>
-    <iframe src="components/header.html" title="Header del sitio"></iframe>
+    <iframe src="components/header.html" title="Header del sitio" style="height: 90px"></iframe>
   </header>
 
   <main>
-    <iframe src="components/content.html" title="Contenido"></iframe>
+    <iframe src="components/content.html" title="Contenido" style="height: 102%;"></iframe>
   </main>
 
   <footer>
-    <iframe src="components/footer.html" title="Footer del sitio"></iframe>
+    <iframe src="components/footer.html" title="Footer del sitio" style="height: 110px;"></iframe>
   </footer>
 </body>
 
