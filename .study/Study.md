@@ -107,5 +107,21 @@ GitHub Copilot: Aquí tienes un estudio y comparativa de las tecnologías mencio
   100dvh:
   Es el 100% de la altura dinámica de la ventana gráfica, excluyendo barras del navegador (más preciso en móviles modernos).
 
+
+<ul> significa unordered list (lista desordenada). Se usa para crear listas de elementos con viñetas.
+<li> significa list item (elemento de lista). Se usa dentro de <ul> (o <ol>) para definir cada elemento de la lista.
+<a> significa anchor (ancla). Se usa para crear enlaces (links) a otras páginas, archivos, o sitios web. El atributo href indica la dirección a la que apunta el enlace.
+
+
+Elementos estructurales principales de HTML5
+Estos son los elementos semánticos principales de HTML5 para estructurar una página:
+
+<header>: Encabezado de la página o sección.
+<nav>: Navegación principal (menús, enlaces).
+<main>: Contenido principal de la página (solo uno por página).
+<section>: Sección temática del contenido.
+<article>: Contenido independiente, como un post o noticia.
+<aside>: Contenido secundario o complementario (barras laterales, widgets).
+<footer>: Pie de página de la página o sección.
  */
 ```

@@ -1,28 +1,52 @@
-<link rel="stylesheet" href="../styles/global.css" />
-<style>
-  /* .parent {
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    align-items: center;
-  } */
+<link rel="stylesheet" href="../styles/global.css">
 
-  div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+<style>
+  .footer-content {
+    background: black;
+    width: 100vw;
+    gap: 1rem;
   }
 
-  footer {
-    margin-right: 10px;
-    margin-bottom: 0;
-    height: 100px;
+  hr {
+    border: 1px solid var(--line-clr);
+  }
+
+  .row {
+    display: flex;
+    padding: 15px;
+    gap: 2rem;
+
+    justify-content: center;
+    text-align: center;
+
+    >div {
+      display: flex;
+      gap: 1rem;
+    }
   }
 </style>
 
-<!-- <footer> -->
-<div>
-  <p>Informacion de contacto: correo@gmail.com</p>
+<div class="footer-content">
+
+  <div class="row">
+    <div>
+      <a href="/about.html">Acerca de</a>
+      <a href="mailto:correo@gmail.com">Contacto</a>
+      <a href="/privacy.html">Privacidad</a>
+    </div>
+
+    <hr>
+
+    <div>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <span>&copy; 2026 Mi Portafolio. Todos los derechos reservados.</span>
+  </div>
+
 </div>
-<!-- </footer> -->

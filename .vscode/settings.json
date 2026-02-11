@@ -7,7 +7,7 @@
 		// ".gitignore": true,
 		// ".editorconfig": true,
 		"CHANGELOG.md": true,
-		".prettierrc": true,
+		// ".prettierrc": true,
 		"LICENSE": true,
 		".cspell.config.yaml": true,
 		"astro-test/**": true
