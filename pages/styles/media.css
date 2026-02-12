@@ -99,7 +99,9 @@
     overflow-x: auto;
   }
 
-  /* main, */
+  main {
+    margin-right: 30px;
+  }
   header,
   footer {
     margin-left: 0;
