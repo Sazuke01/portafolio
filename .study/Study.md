@@ -123,5 +123,9 @@ Estos son los elementos semánticos principales de HTML5 para estructurar una p�
 <article>: Contenido independiente, como un post o noticia.
 <aside>: Contenido secundario o complementario (barras laterales, widgets).
 <footer>: Pie de página de la página o sección.
+
+
+background-color solo define el color de fondo de un elemento.
+background es una propiedad abreviada (shorthand) que puede incluir color, imagen, posición, tamaño, repetición, origen, clip y attachment del fondo.
  */
 ```

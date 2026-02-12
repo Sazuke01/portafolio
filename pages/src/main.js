@@ -32,3 +32,7 @@ function toggleSubMenu(button) {
     toggleButton.classList.toggle('rotate');
   }
 }
+
+function toggleTheme(button) {
+  document.body.classList.toggle('dark');
+}
