@@ -2,39 +2,49 @@
 @import url('./theme.css');
 
 #sidebar {
-  grid-row: 1 / span 3;
-  grid-column: 1;
+  /* grid-row: 1 / span 3;
+  grid-column: 1; */
 
   box-sizing: border-box;
+
   height: 100vh;
   width: 250px;
   padding: 5px 1em;
 
-  background-color: var(--base-clr);
+  z-index: 110;
+
+  /* background-color: var(--base-clr); */
+  background: rgba(0, 0, 0, 0.3);
+  /* Transparente */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
   border-right: 1px solid var(--line-clr);
 
-  position: sticky;
-  align-self: start;
+  /* position: sticky; */
+  /* align-self: start; */
+
+  position: fixed;
+  left: 0;
   top: 0;
 
+  /* ocultar para elementos que sobresalen */
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
 }
-
+#sidebar.close {
+  padding: 5.5px;
+  width: 60px;
+}
 #sidebar ul {
-  display: flex;
-  flex-direction: column;
-
-  height: 100%;
-  padding: 0;
-  margin: 0;
-
   list-style: none;
 }
-
 #sidebar > ul > li:first-child {
   margin-bottom: 16px;
+
   display: flex;
   justify-content: flex-end;
 
@@ -42,31 +52,16 @@
     font-weight: 600;
   }
 }
-
 #sidebar ul li.active a {
   color: var(--accent-clr);
 
-  img {
+  img,
+  svg {
     fill: var(--accent-clr);
   }
 }
 
 /* decoracion estetica basica. desplegable y resaltar al pasar sobre boton */
-#sidebar img {
-  flex-shrink: 0;
-  fill: var(--text-clr);
-}
-
-#sidebar a span,
-#sidebar .dropdown-btn span {
-  flex-grow: 1;
-}
-
-#sidebar a:hover,
-#sidebar .dropdown-btn:hover {
-  background-color: var(--hover-clr);
-}
-
 #sidebar a,
 #sidebar .logo,
 #sidebar .dropdown-btn {
@@ -79,6 +74,22 @@
   border-radius: 0.5em;
   padding: 0.85em;
   gap: 1em;
+}
+
+#sidebar img,
+#sidebar svg {
+  flex-shrink: 0;
+  fill: var(--text-clr);
+}
+
+#sidebar a span,
+#sidebar .dropdown-btn span {
+  flex-grow: 1;
+}
+
+#sidebar a:hover,
+#sidebar .dropdown-btn:hover {
+  background-color: var(--hover-clr);
 }
 
 /* Sub menu */
@@ -116,7 +127,8 @@
 
 #toggle-btn {
   margin-left: auto;
-  padding: 1em;
+  padding: 0.85em;
+  /* gap: 1em; */
 
   border: none;
   border-radius: 0.5em;
@@ -125,6 +137,7 @@
 
   cursor: pointer;
 
+  img,
   svg {
     transition: rotate 150ms ease;
   }
@@ -134,14 +147,15 @@
 }
 
 /* Efectos de despliege y pliege de elementos de boton toggle */
-.drop-btn svg {
+.dropdown-btn img,
+.dropdown-btn svg {
   transition: 200ms ease;
 }
+.rotate img:last-child,
 .rotate svg:last-child {
-  rotate: -180deg;
-  /* animation: rotate 2s linear infinite; */
+  rotate: 180deg;
 }
 
 #sidebar .sub-menu a {
-  padding-left: 20em;
+  padding-left: 2em;
 }

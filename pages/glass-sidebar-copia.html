@@ -29,8 +29,9 @@
 
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/glass-sidebar.css">
+  <link rel="stylesheet" href="styles/media.css">
 
-  <script src="src/main.js"></script>
+  <script type="text/javascript" src="src/main.js" defer></script>
 
   <style>
     /* Body elements */
@@ -46,11 +47,11 @@
 
 <body>
 
-  <nav id="sidebar">
+  <nav id="sidebar" class="close">
     <ul>
       <li>
-        <span onclick=toggleSidebar() class="logo">Logo</span>
-        <button id="toggle-btn">
+        <span class="logo">Logo</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
           <img src="icons/24dp/keyboard_double_arrow_left.svg">
         </button>
       </li>
@@ -96,14 +97,14 @@
 
   <header>
     <div class="header-container">
-      <div class="row center">
+      <div class="row center-all">
         <img src="public/favicon.svg" width="32" alt="Icono">
         <h1>Portafolio personal</h1>
       </div>
 
-      <hr>
+      <!-- <hr> -->
 
-      <div class="row-e center">
+      <!-- <div class="row-e center">
         <hr>
         <a href="index.html" target="_parent">Ir a inicio</a>
         <hr>
@@ -113,9 +114,9 @@
         <hr>
         <a href="html.html" target="_parent">Ir ejemplo</a>
         <hr>
-      </div>
+      </div> -->
 
-      <hr>
+      <!-- <hr> -->
     </div>
   </header>
 

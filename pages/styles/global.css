@@ -1,7 +1,7 @@
 /* Global Styles */
 @import url('./theme.css');
 /* @import url('./theme-dark.css'); */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -19,25 +19,35 @@ html {
 body {
   /* position: absolute; */
   min-height: 100vh;
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
+
+  min-width: 100vh;
 
   background-color: var(--base-clr);
   color: var(--text-clr);
 
+  /* display: flex;
+  flex-direction: column; */
+
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr auto;
+
+  /* display: grid;
+  grid-template-columns: 1fr; */
+  /* grid-template-columns: auto 1fr; */
+  /* grid-template-rows: auto 1fr auto; */
 }
 
 /* Elementos generales */
 header {
-  grid-column: 2;
+  /* grid-column: 2; */
   grid-row: 1;
 
   /* Posision siempre arriba, espacio reservado */
   position: sticky;
   top: 0;
-  left: 250px;
+
+  /* produndidad */
   z-index: 100;
 
   /* width: calc(100% - 250px); */
@@ -46,16 +56,18 @@ header {
   background: rgba(0, 0, 0, 0.3);
   /* Transparente */
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
 
   padding-right: 15px;
   padding-left: 15px;
 }
 
 main {
-  grid-column: 2;
+  /* grid-column: 2; */
   grid-row: 2;
 
   display: flex;
@@ -72,8 +84,17 @@ main p {
 }
 
 footer {
-  grid-column: 2;
+  /* grid-column: 2; */
   grid-row: 3;
+
+  /* position: fixed; */
+
+  /* right: 0; */
+  bottom: 0;
+  margin-left: 60px;
+
+  /* width: calc(100% - 60px); */
+  z-index: 90;
 
   padding-right: 15px;
   padding-left: 15px;
@@ -92,16 +113,17 @@ hr {
   border-radius: 1em;
   padding: min(3em, 15%);
   margin-bottom: 20px;
+
+  h2,
+  p {
+    margin-top: 1em;
+  }
 }
 
 .row {
   display: flex;
   padding: 15px;
   gap: 1rem;
-
-  img {
-    align-items: center;
-  }
 }
 
 .row-e {
@@ -113,3 +135,23 @@ hr {
   justify-content: center;
   text-align: center;
 }
+
+.center-all {
+  justify-content: center;
+  text-align: center;
+
+  align-items: center;
+}
+
+/* footer  */
+main,
+header {
+  margin-left: 60px;
+  transition: margin-left 300ms ease-in-out;
+}
+
+/* #sidebar.close ~ main,
+#sidebar.close ~ header,
+#sidebar.close ~ footer {
+  margin-left: 60px;
+} */
