@@ -37,8 +37,6 @@
       overflow-x: scroll;
 
       justify-content: center;
-      text-align: center;
-      align-items: center;
     }
     ul li {
       height: 100%;
