@@ -35,9 +35,11 @@
       grid-auto-flow: column;
       align-items: center;
       overflow-x: scroll;
- 
-      text-align: center;
-justify-content: center;
+
+text-align: center;
+  /* Elimina justify-content: center */
+  scroll-behavior: smooth; 
+/* Opcional: para un scroll suave */
      
 
       
