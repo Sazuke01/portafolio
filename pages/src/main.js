@@ -54,7 +54,8 @@ function toggleTheme(button) {
 // cerrar el sidebar para click en otras zonas
 document.addEventListener('click', function (event) {
   if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
-    toggleSidebar();
+    sidebar.classList.add('close');
+    toggleButton.classList.remove('rotate');
   }
 });
 
