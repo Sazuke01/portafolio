@@ -34,6 +34,85 @@
   <script type="text/javascript" src="pages/src/main.js" defer></script>
 
   <style>
+    /* estilos para contenido en main */
+    main {
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .section {
+      background: rgba(30, 30, 40, 0.7);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #7ec4fa;
+      font-size: 2rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 0 0;
+    }
+
+    .skill {
+      background: #222a36;
+      color: #fff;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+
+    .projects-grid,
+    .apps-grid,
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .project,
+    .app,
+    .art {
+      background: #232b3b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .project-title,
+    .app-title {
+      font-weight: bold;
+      color: #7ec4fa;
+      margin-bottom: 0.5rem;
+    }
+
+    .art img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+      object-fit: cover;
+      max-height: 180px;
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 
@@ -122,37 +201,80 @@
   </header>
 
   <main>
-    <div class="container">
-      <h2>Hello world 2</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
-        accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
-        atque
-        odit, tenetur maxime.</p>
-    </div>
+    <section class="section" id="intro">
+      <h2>Sobre mí</h2>
+      <p>¡Hola! Soy Sazuke01, desarrollador web apasionado por la tecnología, el arte y la creación de soluciones
+        digitales. Me gusta aprender cosas nuevas y compartir mis proyectos con la comunidad.</p>
+    </section>
 
-    <div class="container">
-      <h2>Hello world 2</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
-        accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
-        atque
-        odit, tenetur maxime.</p>
-    </div>
+    <section class="section" id="skills">
+      <h2>Conocimientos</h2>
+      <div class="skills-list">
+        <span class="skill">JavaScript</span>
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">Astro</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Python</span>
+        <span class="skill">Git</span>
+        <span class="skill">Figma</span>
+      </div>
+    </section>
 
-    <div class="container">
-      <h2>Hello world 2</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
-        accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
-        atque
-        odit, tenetur maxime.</p>
-    </div>
+    <section class="section" id="projects">
+      <h2>Proyectos en GitHub</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <span class="project-title">Portafolio Web</span>
+          <p>Mi sitio personal hecho con Astro y JavaScript.</p>
+          <a href="#" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="project">
+          <span class="project-title">App de Notas</span>
+          <p>Aplicación para tomar notas rápidas, hecha en Node.js.</p>
+          <a href="#" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="project">
+          <span class="project-title">Generador de Arte</span>
+          <p>Herramienta para crear imágenes generativas con JavaScript.</p>
+          <a href="#" target="_blank">Ver en GitHub</a>
+        </div>
+      </div>
+    </section>
 
-    <div class="container">
-      <h2>Hello world 2</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquam asperiores. Nihil iusto error
-        accusantium earum sapiente? Quod molestiae dolor, repellendus deserunt provident officia, iste dolores
-        atque
-        odit, tenetur maxime.</p>
-    </div>
+    <section class="section" id="apps">
+      <h2>Apps Publicadas</h2>
+      <div class="apps-grid">
+        <div class="app">
+          <span class="app-title">Mi Calculadora</span>
+          <p>Calculadora simple para Android.</p>
+          <a href="#" target="_blank">Ver en Google Play</a>
+        </div>
+        <div class="app">
+          <span class="app-title">Lista de Tareas</span>
+          <p>App para organizar tareas diarias.</p>
+          <a href="#" target="_blank">Ver en Google Play</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="art">
+      <h2>Arte</h2>
+      <div class="art-grid">
+        <div class="art">
+          <img src="pages/assets/create/png/arte1.png" alt="Arte 1">
+          <span>Ilustración digital inspirada en la naturaleza.</span>
+        </div>
+        <div class="art">
+          <img src="pages/assets/create/png/arte2.png" alt="Arte 2">
+          <span>Retrato en estilo cartoon.</span>
+        </div>
+        <div class="art">
+          <img src="pages/assets/create/png/arte3.png" alt="Arte 3">
+          <span>Diseño abstracto con formas geométricas.</span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
