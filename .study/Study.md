@@ -127,5 +127,16 @@ Estos son los elementos semánticos principales de HTML5 para estructurar una p�
 
 background-color solo define el color de fondo de un elemento.
 background es una propiedad abreviada (shorthand) que puede incluir color, imagen, posición, tamaño, repetición, origen, clip y attachment del fondo.
- */
+
+
+<nav> = navegación
+<aside> = contenido extra o relacionado
+
+*/
+
+display: none; desaparece
+visibility: hidden; /* Oculta pero mantiene el espacio */
+
+flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+justify-content: center; /* Centra los elementos en cada línea */
 ```

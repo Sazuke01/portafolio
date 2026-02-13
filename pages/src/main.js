@@ -35,4 +35,30 @@ function toggleSubMenu(button) {
 
 function toggleTheme(button) {
   document.body.classList.toggle('dark');
+
+  // Guarda el estado en localStorage
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+
+  const img = button.querySelector('img');
+  const span = button.querySelector('span');
+
+  if (document.body.classList.contains('dark')) {
+    img.src = 'pages/icons/24dp/light_mode.svg';
+    span.textContent = 'Modo claro';
+  } else {
+    img.src = 'pages/icons/24dp/dark_mode.svg';
+    span.textContent = 'Modo oscuro';
+  }
 }
+
+// Cargar tema
+document.addEventListener('DOMContentLoaded', () => {
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    if (!document.body.classList.contains('dark')) {
+      document.body.classList.add('dark');
+    }
+  } else {
+    document.body.classList.remove('dark');
+  }
+});

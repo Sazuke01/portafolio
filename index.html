@@ -34,19 +34,20 @@
   <script type="text/javascript" src="pages/src/main.js" defer></script>
 
   <style>
-    /* Body elements */
-    header {
-      padding-bottom: 15px;
+    main {
+      margin-bottom: none;
+      bottom: none;
     }
 
-    .footer-content {
-      gap: 1rem;
+    footer {
+      margin-top: none;
+      top: none;
     }
   </style>
 </head>
 
 <body class="dark">
-
+  <div class="side-element"></div>
   <nav id="sidebar" class="close">
     <ul>
       <li>
@@ -55,6 +56,8 @@
           <img src="pages/icons/24dp/keyboard_double_arrow_left.svg">
         </button>
       </li>
+
+      <hr>
 
       <li class="active">
         <a href="index.html" target="_parent">
@@ -95,13 +98,14 @@
 
       <li>
         <button onclick=toggleTheme(this) class="dropdown-btn">
-          <img src="pages/icons/24dp/settings.svg">
-          <span>Theme</span>
+          <img src="pages/icons/24dp/light_mode.svg">
+          <span>Modo claro</span>
         </button>
       </li>
     </ul>
   </nav>
 
+  <div class="top-element"></div>
   <header>
     <div class="header-container">
       <div class="row center-all">
@@ -124,7 +128,6 @@
       </div> -->
 
       <!-- <hr> -->
-    </div>
   </header>
 
   <main>
@@ -162,9 +165,10 @@
   </main>
 
   <footer>
-    <div class="footer-content">
+    <div class="footer-content center">
+
       <div class="row center">
-        <div class="row-e">
+        <div class="row-e center">
           <a href="/about.html">Acerca de</a>
           <a href="mailto:correo@gmail.com">Contacto</a>
           <a href="/privacy.html">Privacidad</a>
@@ -172,7 +176,8 @@
 
         <hr>
 
-        <div class="row-e">
+        <div class="row-e center">
+
           <a href="https://github.com/" target="_blank">GitHub</a>
           <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
         </div>

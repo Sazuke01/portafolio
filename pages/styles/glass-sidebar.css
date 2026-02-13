@@ -1,10 +1,17 @@
 /* Glass Sidebar Styles */
 @import url('./theme.css');
 
-#sidebar {
-  /* grid-row: 1 / span 3;
-  grid-column: 1; */
+.side-element {
+  position: fixed;
+  right: 0;
+  top: 0;
 
+  width: 60px;
+  height: 100vh;
+
+  z-index: 0;
+}
+#sidebar {
   box-sizing: border-box;
 
   height: 100vh;
@@ -13,11 +20,11 @@
 
   z-index: 110;
 
-  /* position: sticky; */
-  /* align-self: start; */
+  position: sticky;
+  align-self: start;
 
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
 
   /* ocultar para elementos que sobresalen */

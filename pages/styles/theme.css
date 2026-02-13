@@ -58,7 +58,8 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   --base-clr: var(--background);
-  --line-clr: var(--foreground);
+
+  --line-clr: var(--border);
 
   --accent-clr: var(--accent);
   --hover-clr: var(--accent-foreground);
@@ -117,7 +118,8 @@
   --sidebar-ring: oklch(0.439 0 0);
 
   --base-clr: var(--background);
-  --line-clr: var(--foreground);
+
+  --line-clr: var(--border);
 
   --accent-clr: var(--accent);
   --hover-clr: var(--accent-foreground);
@@ -210,6 +212,7 @@ a {
 }
 a:hover,
 a:focus {
+  /* color: var(--secondary, #5a4ff3); */
   color: #5a4ff3;
   background-color: var(--accent, #e9ebef);
 
@@ -252,9 +255,13 @@ main p {
 }
 
 footer {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: var(--secondary);
+  color: var(--primary);
 
-  color: var(--secundary-text-clr);
+  hr {
+    background-color: #5a4ff3;
+    color: #5a4ff3;
+  }
 }
 
 #sidebar {
@@ -267,4 +274,10 @@ footer {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
   border-right: 1px solid var(--line-clr);
+}
+
+.side-element,
+.top-element {
+  /* background-color: var(--accent, #e9ebef); */
+  background-color: var(--secondary, #e9ebef);
 }
