@@ -1,10 +1,6 @@
 /* Glass Sidebar Styles */
 @import url('./theme.css');
 
-.side-element {
-  z-index: 0;
-}
-
 #sidebar,
 .side-element {
   /* position: sticky; */
@@ -16,14 +12,16 @@
 
   width: 4rem;
   height: 100vh;
+
+  z-index: 0;
 }
+
 #sidebar {
   /* ajsute automatico por aumento de tamaño por padding */
   box-sizing: border-box;
 
-  padding: 5px 2em;
-
-  width: 250px;
+  width: 256px;
+  padding: 0.5rem 0.5rem 1rem;
 
   z-index: 110;
 
@@ -31,13 +29,15 @@
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
-}
-#sidebar.close {
-  padding: 5px;
-  width: 4rem;
 
-  img {
-    margin-right: 5px;
+  ul a,
+  ul button {
+    padding: 0.75rem;
+  }
+
+  ul hr {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -46,11 +46,12 @@
   max-height: 100vh;
 
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 /* Primer elemento */
 #sidebar > ul > li:first-child {
-  margin-bottom: 0.4rem;
+  height: 3rem;
 
   display: flex;
   justify-content: flex-end;
@@ -61,16 +62,6 @@
 }
 
 /* elementos generales */
-#sidebar ul li.active a {
-  color: #5e63ff;
-
-  img,
-  svg {
-    fill: #5e63ff;
-
-    background-color: var(--icon-color);
-  }
-}
 
 /* decoracion estetica basica. desplegable y resaltar al pasar sobre boton */
 #sidebar a,
@@ -80,10 +71,8 @@
   align-items: center;
 
   text-decoration: none;
-  color: var(--text-clr);
 
   border-radius: 0.5em;
-  padding: 0.85em;
   gap: 1em;
 }
 
@@ -110,40 +99,30 @@
     overflow: hidden;
   }
 }
-
 #sidebar .sub-menu.show {
   grid-template-rows: 1fr;
 }
+#sidebar .sub-menu a {
+  padding-left: 2em;
+}
 
 /* Botones */
-.bottom-button {
-  margin-top: auto;
+button {
+  border: none;
+  background: none;
+
+  cursor: pointer;
 }
 
 .dropdown-btn {
   width: 100%;
 
-  text-align: left;
-
-  border: none;
-
-  background: none;
-
-  cursor: pointer;
   font: inherit;
+  text-align: left;
 }
-
 #toggle-btn {
-  margin-left: auto;
-  padding: 0.85em;
-  /* gap: 1em; */
-
-  border: none;
   border-radius: 0.5em;
-
-  background: none;
-
-  cursor: pointer;
+  margin-left: auto;
 
   img,
   svg {
@@ -161,13 +140,41 @@
   rotate: 180deg;
 }
 
-#sidebar .sub-menu a {
-  padding-left: 2em;
-}
-
+/* Colores */
 #toggle-btn:hover,
 #sidebar a:hover,
 #sidebar .dropdown-btn:hover {
   background-color: var(--secondary);
   color: var(--primary);
+}
+#sidebar a,
+#sidebar .logo,
+#sidebar .dropdown-btn {
+  color: var(--text-clr);
+}
+
+#sidebar ul li.active a {
+  color: #5e63ff;
+  img,
+  svg {
+    fill: #5e63ff;
+    background-color: var(--icon-color);
+  }
+}
+
+/* Modo plegado */
+#sidebar.close {
+  padding: 0.5rem;
+  width: 4rem;
+
+  span {
+    display: none;
+  }
+
+  ul a {
+    width: 1.5rem;
+  }
+  ul button {
+    width: 3rem;
+  }
 }
