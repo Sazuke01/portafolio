@@ -1,11 +1,11 @@
 @media (max-width: 800px) {
   /* ajustes */
   body {
-    grid-template-columns: 1fr !important;
-    overflow-x: hidden !important;
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
   }
   main {
-    padding: 2em 1em 60px 1em;
+    padding: 2em 1em 4rem 1em;
   }
   .container {
     border: none;
@@ -14,7 +14,7 @@
 
   #sidebar,
   #sidebar.close {
-    height: 60px;
+    height: 4rem;
     width: 100%;
 
     border-right: none;
@@ -32,7 +32,7 @@
     > ul {
       padding: 0;
       display: grid;
-      grid-auto-columns: 60px;
+      grid-auto-columns: 4rem;
       grid-auto-flow: column;
       align-items: center;
       overflow-x: scroll;
@@ -42,8 +42,8 @@
     }
     ul a,
     ul .dropdown-btn {
-      width: 60px;
-      height: 60px;
+      width: 4rem;
+      height: 4rem;
       padding: 0;
       border-radius: 0;
       justify-content: center;
@@ -58,10 +58,10 @@
 
     ul li .sub-menu.show {
       position: fixed;
-      bottom: 60px;
+      bottom: 4rem;
       left: 0;
       box-sizing: border-box;
-      height: 60px;
+      height: 4rem;
       width: 100%;
       background-color: var(--hover-clr);
       border-top: 1px solid var(--line-clr);
@@ -86,27 +86,31 @@
   /* ajustes posteriores */
   .side-element,
   #sidebar hr {
-    width: 0 !important;
-    height: 0 !important;
+    width: 0;
+    height: 0;
 
     display: none;
   }
 
   main,
   footer {
-    margin-right: 0 !important;
+    margin: 0;
     transition: margin-left 300ms ease-in-out;
   }
 
   footer {
-    margin-bottom: 60px !important;
+    margin-bottom: 4rem;
 
-    .footer-content div hr {
-      display: none;
+    .row {
+      gap: 0rem;
     }
   }
+  .footer-content div hr {
+    display: none;
+  }
+
   main {
     padding: 0;
-    padding: min(30px, 7%) !important;
+    padding: min(1.5rem, 7%);
   }
 }

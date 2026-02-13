@@ -139,4 +139,7 @@ visibility: hidden; /* Oculta pero mantiene el espacio */
 
 flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
 justify-content: center; /* Centra los elementos en cada línea */
+
+
+!important esto se agrega donde hay un elemento que es vital que se modifique ante cambios
 ```

@@ -3,7 +3,8 @@
 
 /* 1px = 1 */
 /* 1rem = font-size: 16px; * 1 */
-:root {
+/* :root { */
+.darl {
   --font-size: 16px;
 
   --background: #ffffff;
@@ -70,7 +71,8 @@
   --secondary-text-clr: var(--secondary);
 }
 
-.dark {
+:root {
+  /* .dark { */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
 
@@ -131,15 +133,15 @@
 }
 
 :root {
-  --text-xs: 0.75rem; /* 12px */
-  --text-sm: 0.875rem; /* 14px */
-  --text-base: 1rem; /* 16px */
-  --text-lg: 1.125rem; /* 18px */
-  --text-xl: 1.25rem; /* 20px */
-  --text-2xl: 1.5rem; /* 24px */
-  --text-3xl: 1.875rem; /* 30px */
-  --text-4xl: 2.25rem; /* 36px */
-  --text-5xl: 3rem; /* 48px */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
 }
 
 * {
@@ -242,8 +244,8 @@ header {
   background-color: rgba(0, 0, 0, 0.3);
 
   /* Transparente */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
@@ -252,8 +254,8 @@ header {
 
 main p {
   color: var(--secundary-text-clr);
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 footer {
@@ -261,8 +263,8 @@ footer {
   color: var(--primary);
 
   hr {
-    background-color: #5a4ff3;
-    color: #5a4ff3;
+    background-color: var(--primary);
+    border-color: var(--primary);
   }
 }
 

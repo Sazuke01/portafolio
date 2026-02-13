@@ -12,45 +12,54 @@ body {
 }
 
 /* Elementos generales */
+.top-element {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 4rem;
+
+  z-index: 0;
+}
+
 header {
   /* Fijar posision arriba */
   position: sticky;
   top: 0;
 
-  padding: 15px;
-  padding-top: 0;
+  box-sizing: border-box;
+
+  padding: 1rem;
 
   /* produndidad */
   z-index: 100;
-}
-header {
-  padding-bottom: 15px;
-}
-
-.footer-content {
-  gap: 1rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
-  /* box-sizing: border-box; */
+  margin-right: 4rem;
 
-  /* padding: min(30px, 7%); */
+  padding: min(1.5rem, 7%);
 }
 
 footer {
   bottom: 0;
 
-  padding-right: 15px;
-  padding-left: 15px;
+  box-sizing: border-box;
+
+  margin-right: 4rem;
 
   z-index: 90;
 }
 
 .footer-content {
-  gap: 1rem;
+  padding: 1rem;
+  div {
+    margin: 2.5px;
+  }
 }
 
 /* ! Clases  */
@@ -66,37 +75,21 @@ footer {
   }
 }
 
-.row {
-  display: flex;
-  padding: 15px;
-  gap: 1rem;
-
-  flex-wrap: wrap;
-}
-
+.row,
 .row-e {
   display: flex;
   gap: 1rem;
 }
+.row {
+  flex-wrap: wrap;
+}
 
-.center {
+.center,
+.center-all {
   justify-content: center;
   text-align: center;
 }
 
 .center-all {
-  justify-content: center;
-  text-align: center;
-
   align-items: center;
-}
-
-.top-element {
-  position: absolute;
-  top: 0;
-
-  width: 100%;
-  height: 70px;
-
-  z-index: 0;
 }

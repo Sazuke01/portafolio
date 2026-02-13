@@ -51,6 +51,13 @@ function toggleTheme(button) {
   }
 }
 
+// cerrar el sidebar para click en otras zonas
+document.addEventListener('click', function (event) {
+  if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+    toggleSidebar();
+  }
+});
+
 // Cargar tema
 document.addEventListener('DOMContentLoaded', () => {
   const theme = localStorage.getItem('theme');

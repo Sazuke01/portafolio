@@ -29,11 +29,13 @@
 
   <style>
     iframe {
-      height: 100%;
-      width: 100%;
+      height: 100% !important;
+      width: 100% !important;
 
       border: none;
       overflow: hidden;
+
+      box-sizing: border-box;
 
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -43,7 +45,8 @@
       box-sizing: border-box;
 
       height: 100vh;
-      width: 250px;
+      /* width: 250px; */
+      width: 4rem;
 
       z-index: 110;
 
@@ -51,7 +54,7 @@
       /* align-self: start; */
 
       position: fixed;
-      left: 0;
+      right: 0;
       top: 0;
     }
 
@@ -61,48 +64,60 @@
       height: 100vh;
     }
 
+    header,
     header iframe {
-      padding-bottom: 0;
-      height: 97.5px;
+      /* grid-row: 1; */
+      height: 6.1rem;
     }
 
-    main {
-      padding: 0;
-      margin-top: 35px;
-    }
-
-    footer iframe {
+    /* footer iframe {
       height: 109.5px;
-    }
+    } */
 
-    .content-p {
+    /* .content-p {
       height: 100vh;
       width: 100%;
 
       display: grid;
-      /* grid-template-columns: 1fr; */
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+    } */
+
+    main,
+    main frame {
+      /* grid-row: 2; */
+      height: 100vw;
+    }
+
+    footer,
+    footer iframe {
+      /* grid-row: 3; */
+      height: 6rem;
+
+      padding: 0;
+      margin: 0;
     }
   </style>
 </head>
 
-<body class="dark">
+<body class="darfk">
   <nav id="sidebar-main">
     <iframe src="components/glass-sidebar.html" title="Sidebar"></iframe>
   </nav>
 
-  <div class="content-p">
-    <header>
-      <iframe src="components/header.html" title="Header del sitio"></iframe>
-    </header>
+  <!-- <div class="content-p"> -->
+  <header>
+    <iframe src="components/header.html" title="Header del sitio"></iframe>
+  </header>
 
-    <main>
-      <iframe src="components/content.html" title="Contenido"></iframe>
-    </main>
+  <main>
+    <iframe src="components/content.html" title="Contenido"></iframe>
+  </main>
 
-    <footer>
-      <iframe src="components/footer.html" title="Footer del sitio"></iframe>
-    </footer>
+  <footer>
+    <iframe src="components/footer.html" title="Footer del sitio"></iframe>
+  </footer>
+  <!-- </div> -->
 </body>
-</div>
 
 </html>
