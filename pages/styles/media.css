@@ -25,7 +25,6 @@
 
     padding: 0;
     bottom: 0;
-    /* right: 0; */
 
     z-index: 110;
 
@@ -36,6 +35,10 @@
       grid-auto-flow: column;
       align-items: center;
       overflow-x: scroll;
+
+      justify-content: center;
+      text-align: center;
+      align-items: center;
     }
     ul li {
       height: 100%;
