@@ -3,8 +3,8 @@
 
 /* 1px = 1 */
 /* 1rem = font-size: 16px; * 1 */
-/* :root { */
-.darl {
+:root {
+  /* .dark { */
   --font-size: 16px;
 
   --background: #ffffff;
@@ -71,8 +71,8 @@
   --secondary-text-clr: var(--secondary);
 }
 
-:root {
-  /* .dark { */
+/* :root { */
+.dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
 
