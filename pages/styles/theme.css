@@ -69,6 +69,9 @@
 
   --text-clr: var(--primary);
   --secondary-text-clr: var(--secondary);
+
+  --icon-color: hsla(238, 100%, 68%, 0.75);
+  --icon-color2: hsla(274, 46%, 29%, 0.5);
 }
 
 /* :root { */
@@ -130,6 +133,8 @@
 
   --text-clr: var(--primary);
   --secondary-text-clr: var(--secondary);
+
+  /* --icon-color: transparent; */
 }
 
 :root {

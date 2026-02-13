@@ -67,6 +67,8 @@
   img,
   svg {
     fill: #5e63ff;
+
+    background-color: var(--icon-color);
   }
 }
 
@@ -89,6 +91,8 @@
 #sidebar svg {
   flex-shrink: 0;
   fill: var(--text-clr);
+
+  background-color: var(--icon-color2);
 }
 
 #sidebar a span,
