@@ -70,3 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('dark');
   }
 });
+
+function updateSidebarAlignment() {
+  const sidebarUl = document.querySelector('#sidebar ul');
+  if (!sidebarUl) return;
+
+  // Quita ambas clases
+  sidebarUl.classList.remove('centered', 'scrolled');
+
+  // Si el contenido cabe, centra; si no, alinea a la izquierda
+  if (sidebarUl.scrollWidth <= sidebarUl.clientWidth) {
+    sidebarUl.classList.add('centered');
+  } else {
+    sidebarUl.classList.add('scrolled');
+  }
+}
+
+// Ejecuta al cargar y al cambiar tamaño
+window.addEventListener('resize', updateSidebarAlignment);
+window.addEventListener('DOMContentLoaded', updateSidebarAlignment);
