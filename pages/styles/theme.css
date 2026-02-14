@@ -14,6 +14,7 @@
   --shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
 }
 
+/* ! Thema claro y oscuro */
 :root {
   --font-size: 16px;
 
@@ -167,7 +168,7 @@
   padding: 0;
 }
 
-/* ! Estructura basica de elementos */
+/* ! Estilos generales */
 html {
   font-size: var(--font-size);
 
@@ -289,6 +290,7 @@ footer {
   }
 }
 
+/* ! Estilos especificos */
 #sidebar {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
