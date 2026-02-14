@@ -22,7 +22,7 @@
   --font-size: 16px;
 
   /* Light theme - pastel colors for comfort */
-  --background: oklch(95.222% 0.05122 203.988);
+  --background: oklch(0.96 0.005 45);
   --foreground: oklch(0.18 0 0);
 
   --card: oklch(0.97 0.005 45);
@@ -98,14 +98,14 @@
   --popover: oklch(0.19 0 0);
   --popover-foreground: oklch(0.88 0 0);
 
-  --primary: oklch(0.81 0.08 240);
+  --primary: oklch(0.82 0.08 240);
   --primary-foreground: oklch(0.12 0.02 240);
 
   --secondary: oklch(0.22 0.04 240);
-  --secondary-foreground: oklch(0.81 0.08 240);
+  --secondary-foreground: oklch(0.82 0.08 240);
 
   --muted: oklch(0.26 0.02 240);
-  --muted-foreground: oklch(0.61 0 0);
+  --muted-foreground: oklch(0.64 0 0);
 
   --accent: oklch(0.29 0.06 240);
   --accent-foreground: oklch(0.81 0.08 240);
@@ -215,20 +215,21 @@ h4 {
 }
 
 label {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
   color: var(--text-clr);
 }
 
 button {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-semibold);
   line-height: 1.5;
   cursor: pointer;
   border: none;
   border-radius: var(--radius);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
@@ -261,7 +262,8 @@ textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--ring);
-  box-shadow: 0 0 0 3px rgba(var(--ring), 0.1);
+  background-color: var(--input);
+  box-shadow: 0 0 0 2px rgba(127, 142, 251, 0.15);
 }
 
 /* <a> */
@@ -282,7 +284,7 @@ a::after {
   width: 0;
   height: 2px;
   background-color: var(--ring);
-  transition: width 0.3s ease;
+  transition: width 0.2s ease;
 }
 
 a:hover {
@@ -312,9 +314,7 @@ hr {
 
 /* General elementes colors and styles */
 body {
-  background:
-    linear-gradient(135deg, var(--background), var(--gradient-color1), var(--background)),
-    url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,60 Q25,35 50,60 T100,60 L100,100 L0,100 Z' fill='rgba(20,40,80,0.05)'/%3E%3Cpath d='M0,80 Q25,55 50,80 T100,80 L100,100 L0,100 Z' fill='rgba(30,60,100,0.03)'/%3E%3C/svg%3E");
+  background: linear-gradient(135deg, var(--background), var(--gradient-color1), var(--background));
   color: var(--text-clr);
   transition:
     background-color 0.3s ease,
@@ -391,16 +391,16 @@ footer {
   background: linear-gradient(
     135deg,
     var(--section-background),
-    rgba(100, 140, 220, 0.08),
-    rgba(120, 160, 240, 0.04)
+    rgba(100, 140, 220, 0.06),
+    rgba(120, 160, 240, 0.03)
   );
   color: var(--primary);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .section:hover {
