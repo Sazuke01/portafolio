@@ -1,6 +1,11 @@
 @media (max-width: 800px) {
   #sidebar,
   #sidebar.close {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
     height: 4rem;
     width: 100%;
 
@@ -12,8 +17,6 @@
 
     padding: 0;
     bottom: 0;
-
-    z-index: 110;
 
     > ul {
       justify-content: center;
@@ -51,10 +54,12 @@
       box-sizing: border-box;
       height: 4rem;
       width: 100%;
-      background-color: var(--hover-clr);
+      background-color: var(--background);
       border-top: 1px solid var(--line-clr);
       display: flex;
       justify-content: center;
+
+      z-index: 9999;
 
       > div {
         overflow-x: auto;
@@ -103,5 +108,14 @@
   }
   .footer-content div hr {
     display: none;
+  }
+  #sidebar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+    pointer-events: none;
   }
 }
