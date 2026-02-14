@@ -1,6 +1,4 @@
-/* Global Styles */
-@import url('./theme.css');
-/* @import url('./theme-dark.css'); */
+@import url('theme.css');
 
 body {
   min-height: 100vh;
@@ -33,16 +31,12 @@ header {
 
   /* produndidad */
   z-index: 100;
+
+  transition: transform 0.3s ease;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-
-  margin-right: 4rem;
-
-  padding: min(1.5rem, 7%);
+header.hide-on-scroll {
+  transform: translateY(-100%);
 }
 
 footer {
@@ -63,13 +57,11 @@ footer {
 }
 
 /* ! Clases  */
-.container {
+.section {
   border: 1px solid var(--line-clr);
   border-radius: 1em;
   padding: min(3em, 15%);
   margin-bottom: 20px;
-
-  /* background-color: aqua; */
 
   h2,
   p {
@@ -94,4 +86,10 @@ footer {
 
 .center-all {
   align-items: center;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }

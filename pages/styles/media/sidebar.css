@@ -1,0 +1,105 @@
+@media (max-width: 800px) {
+  #sidebar,
+  #sidebar.close {
+    height: 4rem;
+    width: 100%;
+
+    border-right: none;
+    border-top: 1px solid var(--line-clr);
+
+    position: fixed;
+    top: unset;
+
+    padding: 0;
+    bottom: 0;
+
+    z-index: 110;
+
+    > ul {
+      justify-content: center;
+
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+    }
+    ul li {
+      height: 100%;
+    }
+    ul a,
+    ul .dropdown-btn {
+      width: 4rem;
+      height: 4rem;
+      padding: 0;
+      border-radius: 0;
+      justify-content: center;
+    }
+
+    hr,
+    ul li span,
+    ul li:first-child,
+    .dropdown-btn svg:last-child,
+    .dropdown-btn img:last-child {
+      display: none;
+    }
+
+    ul li .sub-menu.show {
+      position: fixed;
+      bottom: 4rem;
+      left: 0;
+      box-sizing: border-box;
+      height: 4rem;
+      width: 100%;
+      background-color: var(--hover-clr);
+      border-top: 1px solid var(--line-clr);
+      display: flex;
+      justify-content: center;
+
+      > div {
+        overflow-x: auto;
+      }
+      li {
+        display: inline-flex;
+      }
+      a {
+        box-sizing: border-box;
+        padding: 1em;
+        width: auto;
+        justify-content: center;
+      }
+    }
+  }
+
+  #sidebar ul.centered {
+    justify-content: center;
+  }
+  #sidebar ul.scrolled {
+    justify-content: flex-start;
+  }
+
+  .side-element {
+    display: none;
+  }
+
+  #sidebar ul li a img,
+  #sidebar ul li .dropdown-btn img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  main,
+  footer {
+    margin: 0;
+    transition: margin-left 300ms ease-in-out;
+  }
+
+  footer {
+    margin-bottom: 4rem;
+
+    .row {
+      gap: 0rem;
+    }
+  }
+  .footer-content div hr {
+    display: none;
+  }
+}

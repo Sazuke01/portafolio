@@ -27,11 +27,61 @@
   <link rel="icon" type="image/svg+xml" href="pages/public/favicon.svg">
   <link rel="icon" href="pages/public/favicon.ico">
 
-  <link rel="stylesheet" href="pages/styles/style.css">
+  <link rel="stylesheet" href="pages/styles/global.css">
 
   <script type="text/javascript" src="pages/src/main.js" defer></script>
 
   <style>
+    .section {
+      /* margen para el header */
+      scroll-margin-top: 5rem;
+    }
+
+    .section>div {
+      justify-content: center;
+      align-items: center;
+      /* text-align: center; */
+    }
+
+    .section div div {
+      background: #232b3b;
+      color: white;
+
+      border-radius: 0.75rem;
+      padding: 1rem;
+      box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        color: white;
+      }
+
+      /*  */
+      flex: 1 1 260px;
+      max-width: 350px;
+      min-width: 220px;
+      box-sizing: border-box;
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+
+      max-width: 100%;
+      /* max-height: 320px; */
+
+      aspect-ratio: 4/3;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      object-fit: contain;
+      background: #181c24;
+
+      display: block;
+      box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.10);
+    }
   </style>
 </head>
 
@@ -106,6 +156,22 @@
         <img src="pages/public/favicon.svg" width="32" alt="Icono">
         <h1>Portafolio personal</h1>
       </div>
+
+      <!-- <hr> -->
+
+      <!-- <div class="row-e center">
+        <hr>
+        <a href="index.html" target="_parent">Ir a inicio</a>
+        <hr>
+        <a href="new-page.html" target="_parent">Ir a nueva pagina</a>
+        <hr>
+        <a href="https://www.google.com" target="_parent">Ir a Google</a>
+        <hr>
+        <a href="html.html" target="_parent">Ir ejemplo</a>
+        <hr>
+      </div> -->
+
+      <!-- <hr> -->
   </header>
 
   <main>
@@ -115,23 +181,23 @@
         digitales. Me gusta aprender cosas nuevas y compartir mis proyectos con la comunidad.</p>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section" id="span-texts">
       <h2>Conocimientos</h2>
-      <div>
-        <span>JavaScript</span>
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>Astro</span>
-        <span>Node.js</span>
-        <span>Python</span>
-        <span>Git</span>
-        <span>Figma</span>
+      <div class="row center">
+        <span class="span-text">JavaScript</span>
+        <span class="span-text">HTML5</span>
+        <span class="span-text">CSS3</span>
+        <span class="span-text">Astro</span>
+        <span class="span-text">Node.js</span>
+        <span class="span-text">Python</span>
+        <span class="span-text">Git</span>
+        <span class="span-text">Figma</span>
       </div>
     </section>
 
     <section class="section" id="projects">
       <h2>Proyectos en GitHub</h2>
-      <div>
+      <div class="row">
         <div>
           <h3>Portafolio Web</h3>
           <p>Mi sitio personal hecho con Astro y JavaScript.</p>
@@ -152,7 +218,7 @@
 
     <section class="section" id="apps">
       <h2>Apps Publicadas</h2>
-      <div>
+      <div class="row">
         <div>
           <h3>Mi Calculadora</h3>
           <p>Calculadora simple para Android.</p>
@@ -168,7 +234,7 @@
 
     <section class="section" id="art">
       <h2>Arte</h2>
-      <div>
+      <div class="row center-all">
         <div>
           <img src="pages/assets/create/png/arte1.png" alt="Arte 1">
           <span>Ilustración digital inspirada en la naturaleza.</span>

@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// centrar el sidebar o ajustar si excede el ancho
 function updateSidebarAlignment() {
   const sidebarUl = document.querySelector('#sidebar ul');
   if (!sidebarUl) return;
@@ -89,3 +90,19 @@ function updateSidebarAlignment() {
 // Ejecuta al cargar y al cambiar tamaño
 window.addEventListener('resize', updateSidebarAlignment);
 window.addEventListener('DOMContentLoaded', updateSidebarAlignment);
+
+// efecto header
+let lastScrollY = window.scrollY;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  if (!header) return;
+  if (window.scrollY > lastScrollY && window.scrollY > 50) {
+    // Scroll hacia abajo
+    header.classList.add('hide-on-scroll');
+  } else {
+    // Scroll hacia arriba
+    header.classList.remove('hide-on-scroll');
+  }
+  lastScrollY = window.scrollY;
+});
