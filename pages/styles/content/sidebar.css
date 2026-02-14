@@ -1,6 +1,3 @@
-/* Glass Sidebar Styles */
-@import url('./theme.css');
-
 #sidebar,
 .side-element {
   /* position: sticky; */
@@ -81,7 +78,7 @@
   flex-shrink: 0;
   fill: var(--text-clr);
 
-  background-color: var(--icon-color2);
+  background-color: var(--icon-color);
 }
 
 #sidebar a span,
@@ -154,11 +151,11 @@ button {
 }
 
 #sidebar ul li.active a {
-  color: #5e63ff;
+  color: var(--sidebar-primary);
   img,
   svg {
-    fill: #5e63ff;
-    background-color: var(--icon-color);
+    fill: var(--sidebar-primary);
+    background-color: var(--icon-color2);
   }
 }
 
@@ -167,7 +164,9 @@ button {
   padding: 0.5rem;
   width: 4rem;
 
-  span {
+  span,
+  .dropdown-btn svg:last-child,
+  .dropdown-btn img:last-child {
     display: none;
   }
 

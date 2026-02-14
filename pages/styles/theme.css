@@ -60,6 +60,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
+  /* personalizado */
   --base-clr: var(--background);
 
   --line-clr: var(--border);
@@ -70,8 +71,9 @@
   --text-clr: var(--primary);
   --secondary-text-clr: var(--secondary);
 
-  --icon-color: hsla(238, 100%, 68%, 0.75);
-  --icon-color2: hsla(274, 46%, 29%, 0.5);
+  /* general */
+  --icon-color: oklch(0.269 0 0);
+  --icon-color2: oklch(0.488 0.243 264.376);
 }
 
 /* :root { */
@@ -133,8 +135,6 @@
 
   --text-clr: var(--primary);
   --secondary-text-clr: var(--secondary);
-
-  /* --icon-color: transparent; */
 }
 
 :root {
@@ -224,7 +224,7 @@ a {
 a:hover,
 a:focus {
   /* color: var(--secondary, #5a4ff3); */
-  color: #5a4ff3;
+  color: var(--sidebar-primary);
   background-color: var(--accent, #e9ebef);
 
   box-shadow: 0 2px 8px rgba(90, 79, 243, 0.08);

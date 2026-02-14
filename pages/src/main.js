@@ -87,9 +87,17 @@ function updateSidebarAlignment() {
   }
 }
 
-// Ejecuta al cargar y al cambiar tamaño
-window.addEventListener('resize', updateSidebarAlignment);
-window.addEventListener('DOMContentLoaded', updateSidebarAlignment);
+// Ejecuta al cargar y al cambiar tamaño: 1000 = 1 segundo
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(updateSidebarAlignment, 250);
+});
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(updateSidebarAlignment, 250);
+});
+// window.addEventListener('load', updateSidebarAlignment);
+// window.addEventListener('orientationchange', updateSidebarAlignment);
 
 // efecto header
 let lastScrollY = window.scrollY;

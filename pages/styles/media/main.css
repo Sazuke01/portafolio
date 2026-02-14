@@ -18,6 +18,10 @@
     gap: 1rem;
   }
 
+  #skills > div {
+    flex-direction: row;
+  }
+
   .section > div > div {
     min-width: 0;
     width: 100%;

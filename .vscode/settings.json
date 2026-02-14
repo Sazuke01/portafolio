@@ -10,6 +10,6 @@
 		// ".prettierrc": true,
 		"LICENSE": true,
 		".cspell.config.yaml": true,
-		"astro-test/**": true
+		// "astro-test/**": true
   },
 }
