@@ -12,9 +12,11 @@ import './styles/lists.css';
   import { setupDots, initAutoCarousel } from './utils/lists';
 
   document.addEventListener('DOMContentLoaded', async () => {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
     // 1. Cargamos los datos
     await loadData({
-      dataUrl: '/data/projects.json',
+      dataUrl: `${base}/data/projects.json`,
       containerId: 'projects-list',
       emptyMessage: 'No hay proyectos disponibles.',
       renderItem: (project) => {

@@ -8,8 +8,10 @@ import './styles/lists.css';
   import { loadData, escapeHtml } from './utils/dataLoader';
 
   document.addEventListener('DOMContentLoaded', () => {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
     loadData({
-      dataUrl: '/data/art.json',
+      dataUrl: `${base}/data/art.json`,
       containerId: 'art-list',
       emptyMessage: 'No hay obras de arte disponibles.',
       renderItem: (piece) => {
@@ -19,7 +21,7 @@ import './styles/lists.css';
         return `
         <div>
           <img
-            src="${escapeHtml(piece.image)}"
+            src="${base}${escapeHtml(piece.image)}"
             alt="${escapeHtml(piece.alt)}"
             loading="lazy"
             decoding="async"

@@ -5,6 +5,9 @@ import Footer from '@/components/ui/Footer.astro';
 import Header from '@/components/ui/Header.astro';
 
 import Sidebar from '@/components/Sidebar.astro';
+
+// Normalizamos el base removiendo la barra final
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!doctype html>
@@ -41,8 +44,8 @@ import Sidebar from '@/components/Sidebar.astro';
     />
     <meta name="twitter:image" content="https://sazuke01.github.io/portafolio/preview.png" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <link rel="icon" href={`${base}/favicon.ico`} />
   </head>
   <body class="dark">
     <Header />

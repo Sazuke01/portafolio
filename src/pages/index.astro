@@ -1,6 +1,7 @@
 ---
 import Icon from 'src/components/ui/Icon.astro';
 import Layout from 'src/layouts/Layout.astro';
+import Link from 'src/components/ui/Link.astro';
 
 import SkillsList from 'src/components/info-loaders/SkillsList.astro';
 import ContactsList from 'src/components/info-loaders/ContactsList.astro';
@@ -44,12 +45,12 @@ import logoImage from 'src/assets/logo/rombo-s-logo.svg';
         CV.
       </p>
       <div style="display: flex; gap: 20px; justify-content: center; margin-top: 15px;">
-        <a href="/cv" title="Ver CV Web" class="btn-primary">
+        <Link href="/cv" title="Ver CV Web" class="btn-primary">
           <Icon name="cv" /> Ver CV Online
-        </a>
-        <a href="/data/cv/mi-cv.html" target="_blank" title="Ver CV" class="btn-primary">
+        </Link>
+        <Link href="/data/cv/mi-cv.html" target="_blank" title="Ver CV" class="btn-primary">
           <Icon name="cv" /> Ver completo
-        </a>
+        </Link>
       </div>
     </section>
 

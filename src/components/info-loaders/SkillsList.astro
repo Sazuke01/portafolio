@@ -6,8 +6,10 @@
   import { loadData } from './utils/dataLoader';
 
   document.addEventListener('DOMContentLoaded', () => {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
     loadData({
-      dataUrl: '/data/skills.json',
+      dataUrl: `${base}/data/skills.json`,
       containerId: 'skills',
       emptyMessage: 'No hay habilidades disponibles.',
       renderItem: (skillCategory) => {

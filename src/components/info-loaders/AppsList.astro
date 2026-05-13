@@ -1,5 +1,4 @@
 ---
-import { loadData, escapeHtml } from './utils/dataLoader';
 import './styles/lists.css';
 ---
 
@@ -11,8 +10,10 @@ import './styles/lists.css';
   import { loadData, escapeHtml } from './utils/dataLoader';
 
   document.addEventListener('DOMContentLoaded', () => {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
     loadData({
-      dataUrl: '/data/apps.json',
+      dataUrl: `${base}/data/apps.json`,
       containerId: 'apps-list',
       emptyMessage: 'Actualmente no hay aplicaciones publicadas.',
       renderItem: (app) => {

@@ -1,5 +1,6 @@
 ---
 import Icon from '@/components/ui/Icon.astro';
+import Link from '@/components/ui/Link.astro';
 
 const currentPath = Astro.url.pathname;
 
@@ -28,54 +29,54 @@ const isArteActive = currentPath === '/arte' || currentPath === '/arte/';
     <hr />
 
     <li class={isHomeActive ? 'active' : ''}>
-      <a href="/#" title="Ir a inicio" aria-label="Inicio" aria-expanded="false">
+      <Link href="/#" title="Ir a inicio" aria-label="Inicio" aria-expanded="false">
         <Icon name="home" aria-hidden="true" />
         <span>Inicio</span>
-      </a>
+      </Link>
 
       <ul class="sub-menu">
         <li>
-          <a href="/#intro" title="Ver información personal" aria-label="Sobre mí">
+          <Link href="/#intro" title="Ver información personal" aria-label="Sobre mí">
             <Icon name="person" aria-hidden="true" />
             <span>Sobre mí</span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="/#skills" title="Ver conocimientos técnicos" aria-label="Conocimientos">
+          <Link href="/#skills" title="Ver conocimientos técnicos" aria-label="Conocimientos">
             <Icon name="school" aria-hidden="true" />
             <span>Conocimientos</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </li>
 
     <li class={isCVActive ? 'active' : ''}>
-      <a href="/cv" title="Ver CV" aria-label="Ver Currículum Vitae">
+      <Link href="/cv" title="Ver CV" aria-label="Ver Currículum Vitae">
         <Icon name="cv" aria-hidden="true" />
         <span>CV</span>
-      </a>
+      </Link>
     </li>
 
     <li class={isProjectsActive ? 'active' : ''}>
-      <a href="/proyectos" title="Ver proyectos realizados" aria-label="Ver proyectos">
+      <Link href="/proyectos" title="Ver proyectos realizados" aria-label="Ver proyectos">
         <Icon name="folder" aria-hidden="true" />
         <span>Proyectos</span>
-      </a>
+      </Link>
     </li>
 
     <li class={isAppsActive ? 'active' : ''}>
-      <a href="/apps" title="Ver aplicaciones web" aria-label="Ver aplicaciones">
+      <Link href="/apps" title="Ver aplicaciones web" aria-label="Ver aplicaciones">
         <Icon name="browser" aria-hidden="true" />
         <span>Apps</span>
-      </a>
+      </Link>
     </li>
 
     <li class={isArteActive ? 'active' : ''}>
-      <a href="/arte" title="Ver trabajos artísticos" aria-label="Ver arte">
+      <Link href="/arte" title="Ver trabajos artísticos" aria-label="Ver arte">
         <Icon name="brush" aria-hidden="true" />
         <span>Arte</span>
-      </a>
+      </Link>
     </li>
 
     <li>

@@ -10,8 +10,10 @@ import './styles/lists.css';
   import { loadData, escapeHtml } from './utils/dataLoader';
 
   document.addEventListener('DOMContentLoaded', () => {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
     loadData({
-      dataUrl: '/data/contactos.json',
+      dataUrl: `${base}/data/contactos.json`,
       containerId: 'contacts-list',
       emptyMessage: 'No hay proyectos disponibles.',
       renderItem: (project) => {
