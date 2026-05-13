@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV-Juan_Carlos_Camacho-Ingeniero_en_Sistemas_de_Información-Junior-v2</title>
+  <style>
+    :root {
+      --primary: #1B4F72;
+      /* Azul Cobalto Profesional */
+      --secondary: #2E86C1;
+      --text-main: #212529;
+      --text-light: #566573;
+      --bg-section: #F2F4F4;
+      --font-header: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --font-body: 'Georgia', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 10.5pt;
+      line-height: 1.45;
+      color: var(--text-main);
+      padding: 0.5in 0.7in;
+      background-color: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* --- Encabezado --- */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-family: var(--font-header);
+      font-size: 24pt;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .contact-bar {
+      font-family: var(--font-header);
+      font-size: 9pt;
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-bar a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* --- Estilo de Secciones (Banda Harvard Moderna) --- */
+    h2.section-band {
+      font-family: var(--font-header);
+      font-size: 12pt;
+      font-weight: 700;
+      background-color: var(--primary);
+      color: white;
+      padding: 5px 15px;
+      margin: 20px 0 12px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 2px;
+    }
+
+    .item {
+      margin-bottom: 15px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-weight: bold;
+      font-size: 11pt;
+      color: var(--primary);
+    }
+
+    .item-date {
+      font-family: var(--font-header);
+      font-size: 9.5pt;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    .item-sub {
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    ul {
+      margin-left: 22px;
+      list-style-type: disc;
+    }
+
+    li {
+      margin-bottom: 4px;
+      text-align: justify;
+    }
+
+    b {
+      color: var(--primary);
+    }
+
+    /* --- Skills Grid --- */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-header);
+      font-size: 9.5pt;
+    }
+
+    .skills-table td {
+      vertical-align: top;
+      padding: 5px 0;
+    }
+
+    .skills-table b {
+      display: inline-block;
+      width: 150px;
+      text-transform: uppercase;
+      font-size: 8.5pt;
+    }
+
+    /* --- Enlaces y Links --- */
+    a {
+      color: #2980b9;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    /* --- Diseño Responsivo (Móvil) --- */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      header h1 {
+        font-size: 18pt;
+      }
+
+      .skills-table,
+      .skills-table tbody,
+      .skills-table tr,
+      .skills-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .skills-table td {
+        padding-bottom: 2px;
+      }
+
+      .skills-table b {
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 2px;
+      }
+
+      .item-header {
+        flex-direction: column;
+      }
+
+      .item-date {
+        margin-top: 3px;
+        margin-bottom: 5px;
+      }
+
+      .contact-bar {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .contact-bar span.bullet {
+        display: none;
+      }
+
+      #enlaces ul {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        margin: 0.4in;
+      }
+
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="no-print" style="text-align:right; margin-bottom: 10px;">
+    <button onclick="window.print()"
+      style="padding: 10px 20px; background: var(--primary); color: white; border: none; cursor: pointer; font-family: sans-serif; border-radius: 4px;">Generar
+      PDF</button>
+  </div>
+
+  <header>
+    <h1>Juan Carlos Camacho</h1>
+    <div class="contact-bar">
+      <span>Pérez Zeledón, San José, Costa Rica</span>
+      <span class="bullet">•</span>
+      <span>+506 8859-5321</span>
+    </div>
+  </header>
+
+  <section id="enlaces">
+    <h2 class="section-band">Cuentas y Enlaces</h2>
+    <ul style="list-style-type: none; margin-left: 0; display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
+      <li><b>LinkedIn:</b> <a href="https://linkedin.com/in/juan-carlos-c-0b3b33351"
+          target="_blank">linkedin.com/in/juan-carlos-c-0b3b33351</a></li>
+      <li><b>Portafolio:</b> <a href="https://sazuke01.github.io/portafolio/"
+          target="_blank">sazuke01.github.io/portafolio/</a></li>
+      <li><b>GitHub Personal:</b> <a href="https://github.com/Sazuke01" target="_blank">github.com/Sazuke01</a></li>
+      <li><b>GitHub Académico:</b> <a href="https://github.com/JuanCaUNA" target="_blank">github.com/JuanCaUNA</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-band">Educación</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Universidad Nacional de Costa Rica (UNA)</span>
+        <span class="item-date">2021 – Actualidad</span>
+      </div>
+      <span class="item-sub">Bachillerato en Ingeniería en Sistemas de Información (Último Año)</span>
+      <ul>
+        <li>Formación técnica intensiva de 6 años enfocada en el <b>Ciclo de Vida de Desarrollo de Software
+            (SDLC)</b> y gestión de proyectos.</li>
+        <li>Áreas de especialización: Ingeniería de Requisitos, Administración de Servidores y Redes, y
+          Seguridad Informática.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-band">Experiencia y Proyectos Técnicos</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Waste Control (Módulo Odoo/ERP)</span>
+        <span class="item-date">Pérez Zeledón, CR</span>
+      </div>
+      <span class="item-sub">Desarrollador Backend | Python, XML, PostgreSQL</span>
+      <ul>
+        <li>Diseñé e implementé una solución de gestión de residuos para la Municipalidad, optimizando el
+          registro mensual de datos críticos para el departamento de gestión ambiental.</li>
+        <li>Configuré la base de datos aplicando <b>buenas prácticas de auditoría</b>, esquemas de login seguros
+          y una integración fluida con la API de Odoo.</li>
+        <li>Realicé el análisis completo del flujo de trabajo municipal para asegurar la mantenibilidad y
+          robustez del software.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Markdown Command Runner (VS Code Extension)</span>
+        <span class="item-date">Proyecto de Herramientas</span>
+      </div>
+      <span class="item-sub">Desarrollador Principal | TypeScript</span>
+      <ul>
+        <li>Desarrollé una herramienta de productividad que automatiza la ejecución de comandos desde archivos
+          de documentación, reduciendo el tiempo de configuración de entornos de desarrollo.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Sistemas de Navegación de Rutas Críticas</span>
+        <span class="item-date">Algoritmia Avanzada</span>
+      </div>
+      <span class="item-sub">Desarrollador Java | Algoritmos Dijkstra & Floyd-Warshall</span>
+      <ul>
+        <li>Programé un motor de navegación eficiente para el cálculo de rutas óptimas, aplicando principios de
+          **complejidad algorítmica** y estructuras de datos avanzadas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-band">Habilidades Técnicas</h2>
+    <table class="skills-table">
+      <tr>
+        <td><b>Lenguajes:</b></td>
+        <td>Python, SQL (PostgreSQL, Oracle, MySQL), Java, TypeScript, JavaScript, HTML5/CSS3.</td>
+      </tr>
+      <tr>
+        <td><b>Tecnologías:</b></td>
+        <td>Astro, React, Node.js, Flask, Odoo, React Native, Prisma ORM, Maven.</td>
+      </tr>
+      <tr>
+        <td><b>Infraestructura:</b></td>
+        <td>Docker, Linux (Debian/Ubuntu), Servidores Apache, Configuración de Redes locales.</td>
+      </tr>
+      <tr>
+        <td><b>Metodologías:</b></td>
+        <td>SOLID, DRY, Arquitectura Limpia (Clean Code), Testing de software, Git/GitHub.</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 class="section-band">Perfil Profesional y Logros</h2>
+    <ul>
+      <li><b>Orientación a la Calidad:</b> Comprometido con la creación de software sólido, estable y fácil de
+        mantener; preferencia por el análisis profundo y la resolución lógica de problemas.</li>
+      <li><b>Autogestión:</b> Capacidad de aprendizaje autodidacta demostrada en la implementación de servidores
+        Linux y tecnologías emergentes como Rust y Go.</li>
+      <li><b>Idiomas:</b> Español (Nativo), Inglés Técnico (Lectura de documentación y escritura técnica).</li>
+    </ul>
+  </section>
+
+</body>
+
+</html>

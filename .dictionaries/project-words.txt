@@ -7,6 +7,7 @@ Neue
 Odoo
 sazuke
 Sazuke
+SDLC
 Segoe
 tsconfigs
 Warshall
