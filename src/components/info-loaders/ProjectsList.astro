@@ -16,7 +16,7 @@ import './styles/lists.css';
 
     // 1. Cargamos los datos
     await loadData({
-      dataUrl: `${base}/data/projects.json`,
+      dataUrl: `https://raw.githubusercontent.com/Sazuke01/data/refs/heads/main/public/data/projects.json`,
       containerId: 'projects-list',
       emptyMessage: 'No hay proyectos disponibles.',
       renderItem: (project) => {

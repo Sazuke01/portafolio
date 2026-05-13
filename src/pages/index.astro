@@ -9,10 +9,17 @@ import Conocimientos from 'src/components/info-loaders/Conocimientos.astro';
 
 import { Image } from 'astro:assets';
 import logoImage from 'src/assets/logo/rombo-s-logo.svg';
+import Cover from 'src/assets/background/cover.svg';
 ---
 
 <Layout>
-  <main style="padding-top: 80px;">
+  <main style="padding-top: 1rem;">
+    <section id="cover" class="section center">
+      <div class="contenedor-recorte derecha">
+        <Image src={Cover} width={512} alt="Cover" loading="eager" />
+      </div>
+    </section>
+
     <section class="section center" id="intro">
       <Image src={logoImage} width={128} alt="Logotipo de Sazuke" loading="eager" />
       <h2>Hola Soy Sazuke01</h2>
@@ -34,7 +41,9 @@ import logoImage from 'src/assets/logo/rombo-s-logo.svg';
     </section>
 
     <section id="Conocimientos">
-      <h1 class="center-all" style="margin-bottom: 10px;">Resumen conocimientos</h1>
+      <h1 class="center-all" style="margin-top: 1rem; margin-bottom: 1rem;">
+        Resumen conocimientos
+      </h1>
       <Conocimientos />
     </section>
 
@@ -60,91 +69,110 @@ import logoImage from 'src/assets/logo/rombo-s-logo.svg';
       <ContactsList />
     </section>
   </main>
-</Layout>
 
-<style>
-  body.dark .btn-primary {
-    filter: invert(1) hue-rotate(180deg);
-  }
-
-  .section h3 {
-    margin-top: 20px;
-  }
-
-  #intro img {
-    border: none;
-  }
-
-  /* ---- */
-  #skills {
-    > div {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1rem 0 0 0;
+  <style>
+    body.dark .btn-primary {
+      filter: invert(1) hue-rotate(180deg);
     }
 
-    .skills-grid {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
+    .section h3 {
+      margin-top: 20px;
     }
 
-    span {
-      font-weight: var(--font-weight-medium);
-      font-size: var(--text-sm);
+    #intro img {
+      border: none;
+    }
 
-      background: var(--secondary) !important;
+    /* ---- */
+    #skills {
+      > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem 0 0 0;
+      }
+
+      .skills-grid {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
+      span {
+        font-weight: var(--font-weight-medium);
+        font-size: var(--text-sm);
+
+        background: var(--secondary) !important;
+        color: var(--primary);
+
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+
+        padding: 0.5rem 1rem;
+
+        cursor: default;
+        transition:
+          transform var(--transition-fast),
+          box-shadow var(--transition-fast),
+          background-color var(--transition-base),
+          color var(--transition-base);
+      }
+    }
+
+    /* ---- */
+    #Conocimientos {
+      background-color: var(--section-background);
       color: var(--primary);
 
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
+      div > div:hover {
+        box-shadow: var(--shadow);
+      }
 
-      padding: 0.5rem 1rem;
-
-      cursor: default;
-      transition:
-        transform var(--transition-fast),
-        box-shadow var(--transition-fast),
-        background-color var(--transition-base),
-        color var(--transition-base);
-    }
-  }
-
-  /* ---- */
-  #Conocimientos {
-    background-color: var(--section-background);
-    color: var(--primary);
-
-    div > div:hover {
-      box-shadow: var(--shadow);
+      border: 1px solid var(--line-clr);
+      border-radius: 1em;
+      margin-bottom: 20px;
     }
 
-    border: 1px solid var(--line-clr);
-    border-radius: 1em;
-    padding: min(3em, 15%);
-    margin-bottom: 20px;
-  }
-
-  #Conocimientos:hover {
-    box-shadow:
-      var(--shadow),
-      0 0 25px rgba(100, 140, 220, 0.15);
-    transform: translateY(-0.5px);
-  }
-
-  /* ---- */
-  #cv {
-    .btn-primary {
-      background-color: var(--secondary-foreground);
-      color: var(--secondary);
-      padding: 0.25rem;
+    #Conocimientos:hover {
+      box-shadow:
+        var(--shadow),
+        0 0 25px rgba(100, 140, 220, 0.15);
+      transform: translateY(-0.5px);
     }
-  }
 
-  /* ---- */
-  @media (max-width: 600px) {
-    #skills > div {
-      flex-direction: row;
+    /* ---- */
+    #cv {
+      .btn-primary {
+        background-color: var(--secondary-foreground);
+        color: var(--secondary);
+        padding: 0.25rem;
+      }
     }
-  }
-</style>
+
+    /* ---- */
+    @media (max-width: 600px) {
+      #skills > div {
+        flex-direction: row;
+      }
+    }
+
+    .mi-portada {
+      width: 100%; /* Ocupa todo el ancho de su contenedor */
+      min-height: 150px; /* Pero no supera los 300px en pantallas grandes */
+      height: auto; /* Mantiene la proporción para no deformarse */
+    }
+
+    .contenedor-recorte {
+      overflow: hidden; /* Oculta todo lo que se salga del contenedor */
+    }
+    .contenedor-recorte img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: left center;
+    }
+
+    .contenedor-recorte.derecha img {
+      object-position: right center; /* Alinea y fija el recorte a la derecha */
+    }
+  </style>
+</Layout>

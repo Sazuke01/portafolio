@@ -84,3 +84,14 @@ body {
 main {
   flex: 1;
 }
+
+#cover,
+#cover div {
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+#cover > div {
+  filter: invert(0.9) hue-rotate(310deg);
+}

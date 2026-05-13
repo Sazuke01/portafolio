@@ -19,7 +19,7 @@
   div {
     padding: 1rem;
 
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     align-items: center;
   }

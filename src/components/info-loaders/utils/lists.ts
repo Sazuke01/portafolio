@@ -50,7 +50,7 @@ export function initAutoCarousel() {
   if (items.length <= 1) return;
 
   let currentIndex = 0;
-  const intervalTime = 2500;
+  const intervalTime = 3500;
 
   const goToCurrentSlide = () => {
     const gap = parseInt(window.getComputedStyle(list).gap) || 0;

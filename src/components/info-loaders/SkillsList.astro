@@ -9,7 +9,7 @@
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
     loadData({
-      dataUrl: `${base}/data/skills.json`,
+      dataUrl: `https://raw.githubusercontent.com/Sazuke01/data/refs/heads/main/public/data/skills.json`,
       containerId: 'skills',
       emptyMessage: 'No hay habilidades disponibles.',
       renderItem: (skillCategory) => {

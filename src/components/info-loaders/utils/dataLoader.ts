@@ -38,18 +38,22 @@ export async function loadData(config: LoaderConfig): Promise<void> {
       return;
     }
 
-    data.forEach((item) => {
-      if (!item || typeof item !== 'object') {
-        console.warn('Elemento inválido:', item);
-        return;
-      }
+    const html = data
+      .map((item) => {
+        if (!item || typeof item !== 'object') {
+          console.warn('Elemento inválido:', item);
+          return '';
+        }
+        try {
+          return config.renderItem(item);
+        } catch (itemError) {
+          console.warn('Error renderizando elemento:', item, itemError);
+          return '';
+        }
+      })
+      .join('');
 
-      try {
-        container.insertAdjacentHTML('beforeend', config.renderItem(item));
-      } catch (itemError) {
-        console.warn('Error renderizando elemento:', item, itemError);
-      }
-    });
+    container.innerHTML = html;
   } catch (error) {
     console.error(`Error cargando datos de ${config.dataUrl}:`, error);
     const container = document.getElementById(config.containerId);

@@ -10,7 +10,9 @@ import './styles/conocimientos.css';
   document.addEventListener('DOMContentLoaded', () => {
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-    fetch(`${base}/data/conocimientos.json`)
+    fetch(
+      `https://raw.githubusercontent.com/Sazuke01/data/refs/heads/main/public/data/conocimientos.json`,
+    )
       .then((res) => res.json())
       .then((data) => {
         const container = document.querySelector('#conocimientos > div');

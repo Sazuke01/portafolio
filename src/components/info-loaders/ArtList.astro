@@ -6,12 +6,11 @@ import './styles/lists.css';
 
 <script>
   import { loadData, escapeHtml } from './utils/dataLoader';
+  import { initAutoCarousel } from './utils/lists';
 
   document.addEventListener('DOMContentLoaded', () => {
-    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
     loadData({
-      dataUrl: `${base}/data/art.json`,
+      dataUrl: `https://raw.githubusercontent.com/Sazuke01/data/refs/heads/main/public/data/art.json`,
       containerId: 'art-list',
       emptyMessage: 'No hay obras de arte disponibles.',
       renderItem: (piece) => {
@@ -19,24 +18,105 @@ import './styles/lists.css';
           throw new Error('Obra de arte incompleta - faltan campos requeridos');
         }
         return `
-        <div>
-          <img
-            src="${base}${escapeHtml(piece.image)}"
-            alt="${escapeHtml(piece.alt)}"
-            loading="lazy"
-            decoding="async"
-          />
-          <span>${escapeHtml(piece.title)}</span>
-        </div>
-        `;
+          <div class="art-image-container" data-image="${escapeHtml(piece.image)}" data-title="${escapeHtml(piece.title)}">
+            <img
+              src="${escapeHtml(piece.image)}"
+              alt="${escapeHtml(piece.alt)}"
+              loading="lazy"
+              decoding="async"
+              class="art-image"
+            />
+
+            <button
+              class="art-open-button"
+              type="button"
+              title="Ver en detalle"
+            >
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-9 9M3 21l9-9"></path>
+              </svg>
+            </button>
+            <span >${escapeHtml(piece.title)}</span>
+            </div>
+            `;
       },
     });
+
+    // Lightbox functionality
+    const modal = document.createElement('div');
+    modal.id = 'art-modal';
+    modal.className = 'art-modal';
+    modal.innerHTML = `
+      <div class="art-modal-content">
+        <button class="art-modal-close" title="Cerrar (Esc)">&times;</button>
+        <img class="art-modal-image" src="" alt="" />
+        <div class="art-modal-info">
+          <p class="art-modal-title"></p>
+          <a class="art-modal-link" href="" target="_blank" rel="noopener noreferrer" title="Abrir en nueva ventana">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Abrir en nueva ventana
+          </a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Event listeners for images
+    const artList = document.getElementById('art-list');
+    const modalImage = modal.querySelector('.art-modal-image');
+    const modalTitle = modal.querySelector('.art-modal-title');
+    const modalLink = modal.querySelector('.art-modal-link') as HTMLAnchorElement | null;
+    const modalCloseButton = modal.querySelector('.art-modal-close');
+
+    if (
+      artList &&
+      modalImage instanceof HTMLImageElement &&
+      modalTitle &&
+      modalLink instanceof HTMLAnchorElement &&
+      modalCloseButton instanceof HTMLButtonElement
+    ) {
+      artList.addEventListener('click', (e) => {
+        const target = e.target;
+        if (!(target instanceof Element)) return;
+
+        const button = target.closest('.art-open-button');
+        if (!button) return;
+
+        const container = button.closest('.art-image-container') as HTMLElement | null;
+        const image = container?.querySelector('.art-image');
+        if (!(image instanceof HTMLImageElement) || !container) return;
+
+        const title = container.dataset.title ?? '';
+
+        modalImage.src = image.src;
+        modalImage.alt = image.alt;
+        modalTitle.textContent = title;
+        modalLink.href = image.src;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Close modal
+      const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      modalCloseButton.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+      });
+    }
+
+    initAutoCarousel();
   });
 </script>
 
-<style>
-  #art img:hover {
-    transform: scale(1.02) translateY(-3px) !important;
-    box-shadow: var(--shadow-lg) !important;
-  }
-</style>
+<style></style>

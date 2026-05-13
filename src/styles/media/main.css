@@ -6,9 +6,18 @@
 }
 
 @media (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
+  }
   .section {
     border: none;
-    padding: 1.5rem;
+  }
+
+  main,
+  .section .section div {
+    margin: 0.2rem;
+    padding: 0.2rem;
   }
 }
 
@@ -24,7 +33,16 @@
     max-width: 100%;
   }
 
-  .section {
-    padding: 1rem;
+  body,
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
+  .section,
+  .section div,
+  #Conocimientos {
+    margin: 0.4rem;
+    padding: 0.2rem;
   }
 }
