@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Waste Control (En desarrollo)",
+    "description": "Proyecto universitario para la Municipalidad de Pérez Zeledón; módulo en Python/XML para control de registros de residuos.",
+    "github": "https://github.com/JuanCaUNA/waste-control"
+  },
+  {
+    "title": "Markdown Command Runner (Beta/TS)",
+    "description": "Extensión para VS Code que ejecuta comandos desde archivos Markdown.",
+    "github": "https://github.com/Sazuke01/markdown-command-runner"
+  },
+  {
+    "title": "Wireless Game Controller (En desarrollo)",
+    "description": "App multiplataforma (Kotlin/C#) para usar el móvil como control de juegos vía WiFi.",
+    "github": "https://github.com/Sazuke01/wireless-game-controller"
+  },
+  {
+    "title": "NavigateTrack (Java)",
+    "description": "Sistema de navegación que implementa Dijkstra y Floyd-Warshall.",
+    "github": "https://github.com/JuanCaUNA/NavigateTrack"
+  },
+  {
+    "title": "Portafolio Personal",
+    "description": "Sitio web construido con Astro (HTML, CSS, TS, JS).",
+    "github": "https://github.com/Sazuke01/portafolio"
+  },
+  {
+    "title": "Plants App (En curso)",
+    "description": "Aplicación móvil con React Native y TypeScript.",
+    "github": "https://github.com/Sazuke01/plants-app"
+  },
+  {
+    "title": "Plants App (En curso)",
+    "description": "Aplicación móvil con React Native y TypeScript.",
+    "github": "https://github.com/Sazuke01/plants-app"
+  }
+]

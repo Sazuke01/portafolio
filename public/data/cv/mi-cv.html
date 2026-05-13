@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV-Juan_Carlos_Camacho-Ingeniero_en_Sistemas_de_Información-Junior-v1</title>
+  <style>
+    /* --- Configuración Global de Estilo --- */
+    :root {
+      --primary-color: #2c3e50;
+      /* Gris azulado oscuro para texto principal */
+      --accent-color: #e74c3c;
+      /* Rojo suave para detalles y resaltados */
+      --section-bg: #ecf0f1;
+      /* Gris muy claro para bandas de sección */
+      --text-dark: #333;
+      --text-light: #fff;
+      --body-bg: #fff;
+
+      /* Tipografía estilo Harvard */
+      --font-main: 'Garramond', 'Georgia', serif;
+      --font-headings: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      font-size: 11pt;
+      /* Tamaño de fuente estándar para CVs */
+      line-height: 1.3;
+      color: var(--text-dark);
+      background-color: var(--body-bg);
+      padding: 0.5in;
+      /* Margen estándar de Harvard */
+      -webkit-print-color-adjust: exact;
+      /* Fuerza la impresión de colores en WebKit */
+      print-color-adjust: exact;
+    }
+
+    /* --- Estilos de Impresión PDF --- */
+    @media print {
+      body {
+        padding: 0;
+        margin: 0.5in;
+        /* Margen para el PDF impreso */
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary-color) !important;
+      }
+
+      .no-print {
+        display: none;
+      }
+    }
+
+    /* --- Encabezado --- */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 10px;
+    }
+
+    header h1 {
+      font-family: var(--font-headings);
+      font-size: 26pt;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-family: var(--font-headings);
+      font-size: 10pt;
+      color: var(--text-dark);
+    }
+
+    header a {
+      color: var(--text-dark);
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+      color: var(--accent-color);
+    }
+
+    /* --- Secciones Generales --- */
+    section {
+      margin-bottom: 15px;
+    }
+
+    /* Título de Sección con Banda de Color */
+    h2.sections-title {
+      font-family: var(--font-headings);
+      font-size: 14pt;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: var(--section-bg);
+      padding: 8px 15px;
+      border-left: 5px solid var(--accent-color);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* --- Contenedor de Entradas (Educación, Experiencia) --- */
+    .entry {
+      margin-bottom: 12px;
+      padding-left: 15px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .entry-title {
+      font-family: var(--font-headings);
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .entry-accent {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .entry-location-date {
+      font-family: var(--font-headings);
+      font-size: 10pt;
+      color: var(--primary-color);
+      text-align: right;
+      font-style: italic;
+    }
+
+    .entry-subtitle {
+      font-style: italic;
+      margin-bottom: 5px;
+      font-size: 10.5pt;
+    }
+
+    .entry-list {
+      list-style-type: circle;
+      margin-left: 20px;
+      font-size: 10pt;
+    }
+
+    .entry-list li {
+      margin-bottom: 3px;
+    }
+
+    /* --- Habilidades (Skills) --- */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding-left: 15px;
+      font-size: 10pt;
+    }
+
+    .skill-category {
+      margin-bottom: 5px;
+    }
+
+    .skill-category strong {
+      font-family: var(--font-headings);
+      color: var(--primary-color);
+      display: inline-block;
+      width: 140px;
+      /* Alineación de las etiquetas */
+    }
+
+    .skill-item {
+      display: inline;
+    }
+
+    .skill-item::after {
+      content: " | ";
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .skill-item:last-child::after {
+      content: "";
+    }
+
+    /* --- Otros Detalles --- */
+    .details-list {
+      list-style-type: none;
+      padding-left: 15px;
+      font-size: 10pt;
+    }
+
+    .details-list li {
+      margin-bottom: 4px;
+    }
+
+    .details-list strong {
+      color: var(--primary-color);
+    }
+  </style>
+</head>
+
+<div>
+
+  <div class="no-print" style="position: fixed; top: 20px; right: 10px; z-index: 100;">
+    <button onclick="window.print()"
+      style="padding: 10px 20px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer; font-family: sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+      Imprimir a PDF
+    </button>
+  </div>
+
+  <header>
+    <h1>Juan Carlos Camacho</h1>
+    <p>
+      Pérez Zeledón, San José, Costa Rica |
+      <a href="https://linkedin.com/in/juan-carlos-c-0b3b33351" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/Sazuke01" target="_blank">GitHub Personal</a> |
+      <a href="https://github.com/JuanCaUNA" target="_blank">GitHub UNA</a> |
+      <a href="https://sazuke01.github.io/portafolio/" target="_blank">Portafolio</a>
+    </p>
+  </header>
+
+  <section id="educacion">
+    <h2 class="sections-title">Educación</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">Universidad Nacional de Costa Rica (UNA)</div>
+        <div class="entry-location-date">Heredia, Costa Rica<br>2021 – Presente</div>
+      </div>
+      <div class="entry-subtitle">Bachillerato en Ingeniería en Sistemas de Información | <span
+          class="entry-accent">Estudiante de Último Año (4°)</span></div>
+      <ul class="entry-list">
+        <li><span class="entry-accent">Áreas cursadas:</span> Cálculo, Álgebra, Probabilidad y Estadística,
+          Redes y Servidores, Seguridad Informática (Básico), Principios de IA y Agentes, Ingeniería de
+          Requisitos, Costos y Seguimiento de Proyectos.</li>
+        <li><span class="entry-accent">Logros:</span> 6 años de formación académica y práctica intensiva en
+          desarrollo de software, enfoque en análisis profundo y código de alta calidad.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2 class="sections-title">Habilidades Técnicas</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <strong>Lenguajes (Intermedio):</strong>
+        <span class="skill-item">Python</span>
+        <span class="skill-item">SQL</span>
+        <span class="skill-item">HTML/CSS</span>
+      </div>
+      <div class="skill-category">
+        <strong>Lenguajes (Básico):</strong>
+        <span class="skill-item">Java (JavaFX, Maven)</span>
+        <span class="skill-item">JavaScript</span>
+        <span class="skill-item">TypeScript</span>
+        <span class="skill-item">C++</span>
+      </div>
+      <div class="skill-category">
+        <strong>Frameworks/Web:</strong>
+        <span class="skill-item">Astro</span>
+        <span class="skill-item">React</span>
+        <span class="skill-item">Node.js (Express)</span>
+        <span class="skill-item">Vue</span>
+        <span class="skill-item">React Native (Aprendizaje)</span>
+      </div>
+      <div class="skill-category">
+        <strong>Backend/APIs:</strong>
+        <span class="skill-item">Flask</span>
+        <span class="skill-item">Odoo</span>
+        <span class="skill-item">REST</span>
+        <span class="skill-item">GraphQL</span>
+        <span class="skill-item">JWT</span>
+      </div>
+      <div class="skill-category">
+        <strong>Bases de Datos:</strong>
+        <span class="skill-item">PostgreSQL</span>
+        <span class="skill-item">Oracle</span>
+        <span class="skill-item">MySQL</span>
+        <span class="skill-item">MongoDB</span>
+        <span class="skill-item">Firebase</span>
+      </div>
+      <div class="skill-category">
+        <strong>Herramientas/DevOps:</strong>
+        <span class="skill-item">Git/GitHub</span>
+        <span class="skill-item">Docker</span>
+        <span class="skill-item">Linux (Bash, SSH, DHCP)</span>
+        <span class="skill-item">VS Code</span>
+        <span class="skill-item">Prisma ORM</span>
+        <span class="skill-item">YAML/JSON</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2 class="sections-title">Proyectos Destacados</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">Waste Control | <span class="entry-accent">Python, XML, Odoo</span></div>
+        <div class="entry-location-date">Pérez Zeledón, Costa Rica<br>En Desarrollo</div>
+      </div>
+      <div class="entry-subtitle">Proyecto Universitario para la Municipalidad de Pérez Zeledón</div>
+      <ul class="entry-list">
+        <li>Desarrollando un módulo personalizado para el control y registro de residuos municipales.</li>
+        <li>Gestionando el ciclo de vida completo del proyecto: análisis de requisitos, definición, interacción
+          directa con el usuario final, desarrollo y fase de pruebas (testing) actual.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">Markdown Command Runner (Beta) | <span class="entry-accent">TypeScript</span>
+        </div>
+        <div class="entry-location-date">GitHub<br>En Desarrollo</div>
+      </div>
+      <div class="entry-subtitle">Herramienta de Automatización / Extensión para VS Code</div>
+      <ul class="entry-list">
+        <li>Creando una extensión que permite ejecutar comandos de programación definidos directamente dentro de
+          archivos Markdown (.md).</li>
+        <li>Soluciona la necesidad de centralizar y ejecutar scripts de proyecto de forma rápida y documentada.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">NavigateTrack | <span class="entry-accent">Java</span></div>
+        <div class="entry-location-date">Proyecto Académico<br>Finalizado</div>
+      </div>
+      <div class="entry-subtitle">Sistema de Navegación de Rutas Óptimas</div>
+      <ul class="entry-list">
+        <li>Implementé algoritmos fundamentales de teoría de grafos (<span class="entry-accent">Dijkstra y
+            Floyd-Warshall</span>) para calcular las rutas más cortas entre puntos.</li>
+        <li>Desarrollado con un enfoque estricto en Programación Orientada a Objetos (POO).</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">Wireless Game Controller | <span class="entry-accent">Kotlin, C#</span></div>
+        <div class="entry-location-date">GitHub<br>En Desarrollo</div>
+      </div>
+      <div class="entry-subtitle">Aplicación Multiplataforma de Baja Latencia</div>
+      <ul class="entry-list">
+        <li>Desarrollando una solución para utilizar el teléfono móvil como control de juegos para PC,
+          optimizando el envío de paquetes vía WiFi para eliminar la latencia.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="perfil">
+    <h2 class="sections-title">Perfil y Filosofía de Trabajo</h2>
+    <div class="entry">
+      <ul class="entry-list">
+        <li><span class="entry-accent">Enfoque:</span> Producción de código de calidad: limpio, estructurado,
+          mantenible y robusto. Priorizo la profundidad y la solidez técnica sobre la rapidez de entrega.</li>
+        <li><span class="entry-accent">Metodología:</span> Funciono mejor con estructuras claras y tareas bien
+          definidas. Prefiero la automatización de procesos y el análisis lógico de problemas.</li>
+        <li><span class="entry-accent">Idiomas:</span> Español (Nativo). Inglés (Básico-Funcional: lectura
+          técnica y escritura de documentación; básico en habla y escucha).</li>
+        <li><span class="entry-accent">Intereses Profesionales:</span> Backend/APIs, Mobile,
+          DevOps/Infraestructura, IA/Data, Automatización y Herramientas de Desarrollo. Interés en aprender Go
+          y Rust.</li>
+        <li><span class="entry-accent">Habilidades Blandas:</span> Trabajo en equipo, análisis estructurado,
+          pensamiento orientado a la calidad y organización.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+</html>

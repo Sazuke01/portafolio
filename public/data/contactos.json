@@ -1,0 +1,26 @@
+[
+  {
+    "type": "GitHub Personal",
+    "name": "Sazuke01",
+    "url": "https://github.com/Sazuke01",
+    "description": "Mi repositorio personal"
+  },
+  {
+    "type": "GitHub UNA",
+    "name": "JuanCaUNA",
+    "url": "https://github.com/JuanCaUNA",
+    "description": "Proyectos académicos"
+  },
+  {
+    "type": "LinkedIn",
+    "name": "juan-carlos",
+    "url": "https://www.linkedin.com/in/juan-carlos-c-0b3b33351",
+    "description": "Perfil profesional"
+  },
+  {
+    "type": "Portafolio",
+    "name": "sazuke01.github.io",
+    "url": "https://sazuke01.github.io/portafolio/",
+    "description": "Mi portafolio web personal"
+  }
+]

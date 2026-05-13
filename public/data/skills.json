@@ -1,0 +1,23 @@
+[
+  {
+    "category": "Lenguajes de Programación",
+    "skills": ["Python", "JavaScript / TypeScript", "Java", "C++", "SQL", "HTML / CSS"]
+  },
+  {
+    "category": "Frameworks y Herramientas",
+    "skills": [
+      "React",
+      "Vue",
+      "Node.js / Express",
+      "Astro",
+      "React Native",
+      "Docker",
+      "Git / GitHub",
+      "Linux / CLI"
+    ]
+  },
+  {
+    "category": "Bases de Datos",
+    "skills": ["PostgreSQL", "Oracle", "MySQL", "MongoDB", "Firebase"]
+  }
+]

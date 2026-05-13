@@ -1,0 +1,60 @@
+{
+  "habilidades": [
+    "APIs REST y GraphQL",
+    "Bases de datos SQL (PostgreSQL, MySQL, Oracle)",
+    "Bases de datos NoSQL (MongoDB, Firebase)",
+    "POO · Principios SOLID · Patrones de diseño",
+    "Estructuras de datos y algoritmos",
+    "Docker · Git · GitHub",
+    "Autenticación JWT · Seguridad básica de APIs",
+    "Linux — CLI, SSH, servidores, DHCP",
+    "ORM Prisma · Swagger · Postman",
+    "Gestión de proyectos: requisitos, costos, seguimiento",
+    "Redes y servidores (fundamentos)",
+    "XML · JSON · YAML · SVG · Markdown"
+  ],
+  "lenguajes": [
+    { "nombre": "Python", "nivel": "Básico – Intermedio", "porcentaje": 52 },
+    { "nombre": "JavaScript / TypeScript", "nivel": "Básico", "porcentaje": 40 },
+    { "nombre": "SQL", "nivel": "Frecuente", "porcentaje": 62 },
+    { "nombre": "Java", "nivel": "Básico", "porcentaje": 36 },
+    { "nombre": "C++", "nivel": "Básico", "porcentaje": 30 },
+    { "nombre": "HTML · CSS", "nivel": "Uso regular", "porcentaje": 55 },
+    { "nombre": "Kotlin · C#", "nivel": "Básico", "porcentaje": 28 }
+  ],
+  "interesesActivos": ["Go", "Rust"],
+  "tecnologias": [
+    "Node.js",
+    "Astro",
+    "Flask",
+    "Docker",
+    "Git / GitHub",
+    "Prisma",
+    "PostgreSQL",
+    "MongoDB",
+    "Firebase",
+    "REST",
+    "GraphQL",
+    "JWT",
+    "Swagger",
+    "Postman",
+    "Linux",
+    "VS Code",
+    "Android Studio",
+    "IntelliJ",
+    "n8n"
+  ],
+  "areasInteres": [
+    "Backend",
+    "APIs",
+    "Mobile",
+    "DevOps",
+    "IA / Data",
+    "Software de escritorio",
+    "Herramientas dev"
+  ],
+  "idiomas": [
+    { "idioma": "Español", "nivel": "Nativo", "detalle": null },
+    { "idioma": "Inglés", "nivel": "Básico", "detalle": "(lectura / escritura técnica)" }
+  ]
+}
