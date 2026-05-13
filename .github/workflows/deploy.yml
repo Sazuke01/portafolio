@@ -29,6 +29,9 @@ jobs:
       - name: Ejecutar compilación de Astro
         run: npm run build
 
+      - name: Add .nojekyll file
+        run: touch ./dist/.nojekyll
+
       - name: Subir archivos estáticos generados
         uses: actions/upload-pages-artifact@v3
         with:
