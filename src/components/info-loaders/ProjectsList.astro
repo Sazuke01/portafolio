@@ -1,0 +1,37 @@
+---
+import './styles/lists.css';
+---
+
+<div class="list-wrapper carousel-window">
+  <div id="projects-list" class="list is-horizontal list-track"></div>
+</div>
+<div id="projects-dots" class="dots-container"></div>
+
+<script>
+  import { loadData, escapeHtml } from './utils/dataLoader';
+  import { setupDots, initAutoCarousel } from './utils/lists';
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    // 1. Cargamos los datos
+    await loadData({
+      dataUrl: '/data/projects.json',
+      containerId: 'projects-list',
+      emptyMessage: 'No hay proyectos disponibles.',
+      renderItem: (project) => {
+        if (!project.title?.trim() || !project.description?.trim() || !project.github?.trim()) {
+          throw new Error('Proyecto incompleto - faltan campos requeridos');
+        }
+        return `
+        <div>
+          <h3>${escapeHtml(project.title)}</h3>
+          <p>${escapeHtml(project.description)}</p>
+          <a href="${escapeHtml(project.github)}" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+        </div>
+        `;
+      },
+    });
+
+    setupDots();
+    initAutoCarousel();
+  });
+</script>

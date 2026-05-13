@@ -1,0 +1,36 @@
+---
+import './styles/lists.css';
+---
+
+<div class="list-wrapper">
+  <div id="contacts-list" class="list is-grid"></div>
+</div>
+
+<script>
+  import { loadData, escapeHtml } from './utils/dataLoader';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadData({
+      dataUrl: '/data/contactos.json',
+      containerId: 'contacts-list',
+      emptyMessage: 'No hay proyectos disponibles.',
+      renderItem: (project) => {
+        if (
+          !project.type?.trim() ||
+          !project.name?.trim() ||
+          !project.url?.trim() ||
+          !project.description?.trim()
+        ) {
+          throw new Error('Proyecto incompleto - faltan campos requeridos');
+        }
+        return `
+        <div>
+          <h3>${escapeHtml(project.type)}</h3>
+          <a href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer">Ir a ver</a>
+          <p>${escapeHtml(project.description)}</p>
+        </div>
+        `;
+      },
+    });
+  });
+</script>

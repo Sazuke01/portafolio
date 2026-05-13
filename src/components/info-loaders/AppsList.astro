@@ -1,0 +1,35 @@
+---
+import { loadData, escapeHtml } from './utils/dataLoader';
+import './styles/lists.css';
+---
+
+<div class="list-wrapper">
+  <div id="apps-list" class="list"></div>
+</div>
+
+<script>
+  import { loadData, escapeHtml } from './utils/dataLoader';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadData({
+      dataUrl: '/data/apps.json',
+      containerId: 'apps-list',
+      emptyMessage: 'Actualmente no hay aplicaciones publicadas.',
+      renderItem: (app) => {
+        if (!app.title?.trim() || !app.description?.trim()) {
+          throw new Error('App incompleta - faltan campos requeridos');
+        }
+        const link = app.url?.trim()
+          ? `<a href="${escapeHtml(app.url)}" target="_blank" rel="noopener noreferrer">Visitar App</a>`
+          : '';
+        return `
+        <div>
+          <h3>${escapeHtml(app.title)}</h3>
+          <p>${escapeHtml(app.description)}</p>
+          ${link}
+        </div>
+        `;
+      },
+    });
+  });
+</script>

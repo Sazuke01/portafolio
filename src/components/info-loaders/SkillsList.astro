@@ -1,0 +1,53 @@
+---
+
+---
+
+<script>
+  import { loadData } from './utils/dataLoader';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadData({
+      dataUrl: '/data/skills.json',
+      containerId: 'skills',
+      emptyMessage: 'No hay habilidades disponibles.',
+      renderItem: (skillCategory) => {
+        if (
+          !skillCategory.category?.trim() ||
+          !Array.isArray(skillCategory.skills) ||
+          skillCategory.skills.length === 0
+        ) {
+          throw new Error('Categoría de skills incompleta');
+        }
+
+        const badgesHtml = skillCategory.skills
+          .map((skill: string) => `<span class="badge">${skill}</span>`)
+          .join('');
+
+        return `
+        <h3 style="margin-top: 2rem;">${skillCategory.category}</h3>
+        <div class="skills-grid">
+              ${badgesHtml}
+        </div>
+        `;
+      },
+    });
+  });
+</script>
+
+<style>
+  .skills-grid {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+
+    background: red !important;
+  }
+  #skills span {
+    background: red !important;
+    /* background: var(--secondary) !important; */
+    color: var(--primary);
+  }
+
+  .badge {
+    background-color: aquamarine !important;
+  }
+</style>
