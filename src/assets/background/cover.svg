@@ -277,8 +277,7 @@ m332 -140 c42 -15 47 -19 43 -43 -2 -15 -6 -48 -9 -75 -14 -126 -101 -187
     <polygon points="750 198 801.802 0 1614.06 0 1614.06 396 801.802 396" fill="#000000" fill-opacity="0.3" style=""></polygon>
     <path d="M 800,0 L 750,198 L 800,396" fill="none" stroke="url(#accent-grad)" stroke-width="3" stroke-opacity="0.6" style=""></path>
     <g transform="matrix(1, 0, 0, 1, 800.000012, 150.000002)" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
-      <text x="0" y="0" font-size="44" font-weight="800" letter-spacing="-0.5" fill="#ffffff" style="white-space: pre;">INGENIERO
-            EN</text>
+      <text x="0" y="0" font-size="44" font-weight="800" letter-spacing="-0.5" fill="#ffffff" style="white-space: pre;">INGENIERO EN</text>
       <text x="0" y="50" font-size="44" font-weight="900" letter-spacing="-0.5" fill="url(#accent-grad)" style="white-space: pre;">SISTEMAS DE INFORMACIÓN</text>
       <rect x="0" y="80" width="650" height="4" fill="#00f2fe" rx="2"></rect>
       <text x="0" y="120" font-size="25" font-weight="500" fill="#ffffff" fill-opacity="0.95" style="white-space: pre;">
