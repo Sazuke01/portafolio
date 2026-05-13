@@ -1,0 +1,61 @@
+---
+import '@/styles/style.css';
+
+import Footer from '@/components/ui/Footer.astro';
+import Header from '@/components/ui/Header.astro';
+
+import Sidebar from '@/components/Sidebar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Sazuke01 - Ingeniero en Sistemas</title>
+    <meta
+      name="description"
+      content="Portafolio de Sazuke01, Ingeniero en Sistemas de Información."
+    />
+    <meta name="author" content="Sazuke01" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sazuke01.github.io/portafolio/" />
+    <meta property="og:title" content="Sazuke01 | Portafolio" />
+    <meta
+      property="og:description"
+      content="Portafolio de Sazuke01 - Ingeniero en Sistemas. Especialidad: Backend, APIs, Mobile y DevOps."
+    />
+    <meta property="og:image" content="https://sazuke01.github.io/portafolio/preview.png" />
+    <meta property="og:site_name" content="Portafolio Sazuke01" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://sazuke01.github.io/portafolio/" />
+    <meta name="twitter:title" content="Sazuke01 | Portafolio" />
+    <meta
+      name="twitter:description"
+      content="Portafolio de Sazuke01 - Ingeniero en Sistemas. Especialidad: Backend, APIs, Mobile y DevOps."
+    />
+    <meta name="twitter:image" content="https://sazuke01.github.io/portafolio/preview.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="dark">
+    <Header />
+    <Sidebar />
+    <slot />
+    <Footer />
+    <div id="side-element"></div>
+
+    <script>
+      import { initSidebar } from '@/scripts/components/sidebar';
+      initSidebar();
+    </script>
+
+    <style></style>
+  </body>
+</html>

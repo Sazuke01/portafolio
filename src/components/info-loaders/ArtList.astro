@@ -1,0 +1,40 @@
+---
+import './styles/lists.css';
+---
+
+<div id="art-list"></div>
+
+<script>
+  import { loadData, escapeHtml } from './utils/dataLoader';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadData({
+      dataUrl: '/data/art.json',
+      containerId: 'art-list',
+      emptyMessage: 'No hay obras de arte disponibles.',
+      renderItem: (piece) => {
+        if (!piece.title?.trim() || !piece.image?.trim() || !piece.alt?.trim()) {
+          throw new Error('Obra de arte incompleta - faltan campos requeridos');
+        }
+        return `
+        <div>
+          <img
+            src="${escapeHtml(piece.image)}"
+            alt="${escapeHtml(piece.alt)}"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>${escapeHtml(piece.title)}</span>
+        </div>
+        `;
+      },
+    });
+  });
+</script>
+
+<style>
+  #art img:hover {
+    transform: scale(1.02) translateY(-3px) !important;
+    box-shadow: var(--shadow-lg) !important;
+  }
+</style>

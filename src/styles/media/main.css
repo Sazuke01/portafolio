@@ -1,0 +1,30 @@
+@media (max-width: 900px) {
+  .section > div > div {
+    flex: 1 1 45%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .section {
+    border: none;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section > div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .section > div > div {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+}

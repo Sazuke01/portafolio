@@ -1,0 +1,186 @@
+.page-wrap {
+  --ink: #1a1a2e;
+  --ink-soft: #3d3d5c;
+  --ink-muted: #6b6b8a;
+  --accent: #2d6a9f;
+  --accent-mid: #3a85c8;
+  --accent-pale: #dbeeff;
+  --band-bg: #1e3a5f;
+  --band-text: #ffffff;
+  --rule: #c8daf0;
+  --tag-bg: #eef5fc;
+  --tag-border: #bad3ee;
+  --white: #ffffff;
+  --page-bg: hsla(213, 44%, 95%, 0.5);
+}
+
+body.dark .page-wrap {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrap {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--page-bg);
+  color: var(--ink);
+
+  border-radius: 0.5rem;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* ── Page wrap ── */
+.page-wrap {
+  padding: 68px 24px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ════════════════════════════
+       sections — Banda de título (efecto Harvard moderno)
+    ════════════════════════════ */
+.sections {
+  margin-bottom: 20px;
+  padding: 2rem;
+}
+
+.sections-title {
+  background: var(--band-bg);
+  color: var(--band-text);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  margin-bottom: 14px;
+  /* Acento izquierdo de color accent */
+  border-left: 4px solid var(--accent-mid);
+}
+
+/* ════════════════════════════
+       HABILIDADES — grid 2 columnas
+    ════════════════════════════ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 28px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-mid);
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════
+       LENGUAJES — barras
+    ════════════════════════════ */
+.lang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+}
+
+.lang-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lang-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--ink-soft);
+}
+
+.lang-label span {
+  color: var(--ink-muted);
+  font-size: 11px;
+}
+
+.bar-track {
+  height: 5px;
+  background: var(--accent-pale);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--accent-mid);
+  border-radius: 4px;
+}
+
+/* ════════════════════════════
+       TAGS
+    ════════════════════════════ */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  color: var(--accent);
+  border-radius: 4px;
+  padding: 2px 9px;
+  font-size: 11.5px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+}
+
+/* ── Columnas para secciones paralelas ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 36px;
+}
+
+/* ── Divider interno sutil ── */
+.inner-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 18px 0;
+}
+
+/* ════════════════════════════
+       RESPONSIVE
+    ════════════════════════════ */
+@media (max-width: 768px) {
+  .skills-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    gap: 20px;
+  }
+
+  .page-wrap {
+    padding: 40px 16px 32px;
+  }
+}

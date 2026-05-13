@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import logoImage from '@/assets/logo/favicon.svg';
+---
+
+<div id="top-element"></div>
+<header class="main-header">
+  <div class="header-container">
+    <div class="row center-all">
+      <Image src={logoImage} width={32} alt="Logotipo" loading="eager" />
+      <h1 class="title">Portafolio Personal</h1>
+    </div>
+  </div>
+</header>

@@ -12,6 +12,9 @@ ignorePaths:
   - '.dictionaries/**'
   - 'LICENSE'
   - '.cspell.config.yaml'
+  - 'public/data/**'
+  - '**.svg'
+  - 'Conocimientos.astro'
 
 dictionaryDefinitions:
   - name: 'project-words'

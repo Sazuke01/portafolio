@@ -1,0 +1,177 @@
+---
+import Icon from '@/components/ui/Icon.astro';
+
+const currentPath = Astro.url.pathname;
+
+// Determinar qué elemento debe estar activo
+const isHomeActive = currentPath === '/' || currentPath === '';
+
+const isCVActive = currentPath === '/cv' || currentPath === '/cv/';
+const isProjectsActive = currentPath === '/proyectos' || currentPath === '/proyectos/';
+const isAppsActive = currentPath === '/apps' || currentPath === '/apps/';
+const isArteActive = currentPath === '/arte' || currentPath === '/arte/';
+---
+
+<nav id="sidebar" class="close" aria-label="Navegación principal">
+  <ul>
+    <li class="center-all">
+      <button
+        id="toggle-btn"
+        title="Expandir/Contraer navegación"
+        aria-label="Expandir o contraer barra de navegación"
+      >
+        <Icon name="doubleArrow" />
+      </button>
+      <span class="title">Barra de navegación</span>
+    </li>
+
+    <hr />
+
+    <li class={isHomeActive ? 'active' : ''}>
+      <a href="/#" title="Ir a inicio" aria-label="Inicio" aria-expanded="false">
+        <Icon name="home" aria-hidden="true" />
+        <span>Inicio</span>
+      </a>
+
+      <ul class="sub-menu">
+        <li>
+          <a href="/#intro" title="Ver información personal" aria-label="Sobre mí">
+            <Icon name="person" aria-hidden="true" />
+            <span>Sobre mí</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/#skills" title="Ver conocimientos técnicos" aria-label="Conocimientos">
+            <Icon name="school" aria-hidden="true" />
+            <span>Conocimientos</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class={isCVActive ? 'active' : ''}>
+      <a href="/cv" title="Ver CV" aria-label="Ver Currículum Vitae">
+        <Icon name="cv" aria-hidden="true" />
+        <span>CV</span>
+      </a>
+    </li>
+
+    <li class={isProjectsActive ? 'active' : ''}>
+      <a href="/proyectos" title="Ver proyectos realizados" aria-label="Ver proyectos">
+        <Icon name="folder" aria-hidden="true" />
+        <span>Proyectos</span>
+      </a>
+    </li>
+
+    <li class={isAppsActive ? 'active' : ''}>
+      <a href="/apps" title="Ver aplicaciones web" aria-label="Ver aplicaciones">
+        <Icon name="browser" aria-hidden="true" />
+        <span>Apps</span>
+      </a>
+    </li>
+
+    <li class={isArteActive ? 'active' : ''}>
+      <a href="/arte" title="Ver trabajos artísticos" aria-label="Ver arte">
+        <Icon name="brush" aria-hidden="true" />
+        <span>Arte</span>
+      </a>
+    </li>
+
+    <li>
+      <button
+        id="theme-btn"
+        class="dropdown-btn"
+        title="Cambiar tema claro/oscuro"
+        aria-label="Cambiar tema"
+      >
+        <Icon name="lightMode" aria-hidden="true" />
+        <span>Modo claro</span>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  #Sidebar {
+    transition: transform 0.5s ease;
+  }
+
+  nav {
+    filter: invert(1) hue-rotate(175deg);
+  }
+
+  #toggle-btn {
+    border-radius: 0.5em;
+    margin-right: auto;
+    margin: 0;
+    padding: 0;
+
+    /* Icon, */
+    svg {
+      transition: rotate 150ms ease;
+    }
+  }
+
+  /* Sub-menú de Inicio */
+  .sub-menu {
+    padding: 0;
+    margin: 0.5rem;
+
+    border-radius: 0.5rem;
+
+    border-left: 3px solid var(--sidebar-primary);
+
+    height: auto;
+    overflow: hidden;
+
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    pointer-events: auto;
+  }
+
+  /* Ocultar sub-menú cuando el sidebar está cerrado */
+  nav.close .sub-menu {
+    max-height: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .sub-menu li {
+    padding: 0.35rem 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .sub-menu li a {
+    opacity: 0.7;
+    font-size: 0.9em;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+  }
+
+  .sub-menu li a:hover {
+    opacity: 0.9;
+  }
+
+  .sub-menu li.sub-active a {
+    opacity: 1;
+    font-weight: 500;
+  }
+
+  .sub-menu li.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15%;
+    height: 70%;
+    width: 4px;
+    background-color: var(--sidebar-primary);
+    border-radius: 0 4px 4px 0;
+  }
+</style>
