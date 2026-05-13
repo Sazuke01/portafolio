@@ -5,6 +5,7 @@ hsla
 linkedin
 Neue
 Odoo
+sazuke
 Sazuke
 Segoe
 tsconfigs
