@@ -1,0 +1,42 @@
+---
+import DoubleArrowIcon from '@/assets/icons/24dp/keyboard_double_arrow_left.svg';
+
+import HomeIcon from '@/assets/icons/24dp/home.svg';
+import PersonIcon from '@/assets/icons/24dp/person.svg';
+import SchoolIcon from '@/assets/icons/24dp/school.svg';
+import FolderIcon from '@/assets/icons/24dp/folder.svg';
+import BrushIcon from '@/assets/icons/24dp/brush.svg';
+import BrowserIcon from '@/assets/icons/24dp/browser_updated.svg';
+
+import LightModeIcon from '@/assets/icons/24dp/light_mode.svg';
+import DarkModeIcon from '@/assets/icons/24dp/dark_mode.svg';
+
+import CVIcon from '@/assets/icons/curriculum-vitae.svg';
+
+import GithubIcon from '@/assets/icons/github.svg';
+import LinkedinIcon from '@/assets/icons/linkedin.svg';
+
+export const Icons = {
+  home: HomeIcon,
+  person: PersonIcon,
+  doubleArrow: DoubleArrowIcon,
+  school: SchoolIcon,
+  folder: FolderIcon,
+  brush: BrushIcon,
+  browser: BrowserIcon,
+  lightMode: LightModeIcon,
+  darkMode: DarkModeIcon,
+  cv: CVIcon,
+  github: GithubIcon,
+  linkedin: LinkedinIcon,
+};
+
+type IconName = keyof typeof Icons;
+
+const { name, ...props } = Astro.props as { name: IconName };
+const IconComponent = Icons[name];
+---
+
+<div>
+  {IconComponent ? <IconComponent {...props} /> : null}
+</div>
