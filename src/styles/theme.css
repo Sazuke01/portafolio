@@ -1,5 +1,45 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Color theme*/
 :root {
@@ -68,7 +108,7 @@
   --secondary-text-clr: oklch(0.46 0 0);
   --section-background: rgba(56, 83, 109, 0.35);
 
-  --day-night: rgb(255, 252, 155);
+  --day-night: rgba(255, 155, 155, 0.85);
   --gradien-day-night: linear-gradient(
     30deg,
     rgb(194, 194, 255),
