@@ -1,0 +1,12 @@
+---
+const { href, ...props } = Astro.props;
+
+// Normalizamos el base removiendo la barra final, para luego
+// concatenar con la ruta que ya viene con su barra inicial "/"
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const finalHref = href.startsWith('/') ? `${base}${href}` : href;
+---
+
+<a href={finalHref} {...props}>
+  <slot />
+</a>
