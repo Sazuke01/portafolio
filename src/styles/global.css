@@ -92,6 +92,6 @@ main {
   gap: 0;
 }
 
-#cover > div {
+body:not(.dark) #cover > div {
   filter: invert(0.9) hue-rotate(310deg);
 }
