@@ -1,0 +1,149 @@
+---
+import Icon from 'src/components/ui/Icon.astro';
+import Layout from 'src/layouts/Layout.astro';
+
+import SkillsList from 'src/components/info-loaders/SkillsList.astro';
+import ContactsList from 'src/components/info-loaders/ContactsList.astro';
+import Conocimientos from 'src/components/info-loaders/Conocimientos.astro';
+
+import { Image } from 'astro:assets';
+import logoImage from 'src/assets/logo/rombo-s-logo.svg';
+---
+
+<Layout>
+  <main style="padding-top: 80px;">
+    <section class="section center" id="intro">
+      <Image src={logoImage} width={128} alt="Logotipo de Sazuke" loading="eager" />
+      <h2>Hola Soy Sazuke01</h2>
+      <p>
+        ¡Hola! Soy estudiante de último año de Ingeniería en Sistemas en la UNA y un gran apasionado
+        por crear verdaderas soluciones de software. Llevo más de 6 años programando y combinando lo
+        que aprendo en la universidad con experiencia práctica en proyectos reales.
+      </p>
+      <p>
+        Me gusta hacer las cosas bien desde el principio: pensar en buenas arquitecturas, código
+        limpio y escalable. Trabajo principalmente en backend, desarrollo de APIs y devops, siempre
+        buscando aportar valor y resolver problemas de forma eficiente.
+      </p>
+    </section>
+
+    <section class="section center" id="skills">
+      <h2>Conocimientos y Habilidades Técnicas</h2>
+      <SkillsList />
+    </section>
+
+    <section id="Conocimientos">
+      <h1 class="center-all" style="margin-bottom: 10px;">Resumen conocimientos</h1>
+      <Conocimientos />
+    </section>
+
+    <section class="section center" id="cv">
+      <h2>Mi Currículum Vitae</h2>
+      <p>
+        Puedes consultar el detalle completo de mi perfil, experiencia y formación académica en mi
+        CV.
+      </p>
+      <div style="display: flex; gap: 20px; justify-content: center; margin-top: 15px;">
+        <a href="/cv" title="Ver CV Web" class="btn-primary">
+          <Icon name="cv" /> Ver CV Online
+        </a>
+        <a href="/data/cv/mi-cv.html" target="_blank" title="Ver CV" class="btn-primary">
+          <Icon name="cv" /> Ver completo
+        </a>
+      </div>
+    </section>
+
+    <section class="section center" id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes un proyecto en mente o quieres que trabajemos juntos? ¡Contácteme!</p>
+      <ContactsList />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  body.dark .btn-primary {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .section h3 {
+    margin-top: 20px;
+  }
+
+  #intro img {
+    border: none;
+  }
+
+  /* ---- */
+  #skills {
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 0 0;
+    }
+
+    .skills-grid {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+
+    span {
+      font-weight: var(--font-weight-medium);
+      font-size: var(--text-sm);
+
+      background: var(--secondary) !important;
+      color: var(--primary);
+
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+
+      padding: 0.5rem 1rem;
+
+      cursor: default;
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background-color var(--transition-base),
+        color var(--transition-base);
+    }
+  }
+
+  /* ---- */
+  #Conocimientos {
+    background-color: var(--section-background);
+    color: var(--primary);
+
+    div > div:hover {
+      box-shadow: var(--shadow);
+    }
+
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    padding: min(3em, 15%);
+    margin-bottom: 20px;
+  }
+
+  #Conocimientos:hover {
+    box-shadow:
+      var(--shadow),
+      0 0 25px rgba(100, 140, 220, 0.15);
+    transform: translateY(-0.5px);
+  }
+
+  /* ---- */
+  #cv {
+    .btn-primary {
+      background-color: var(--secondary-foreground);
+      color: var(--secondary);
+      padding: 0.25rem;
+    }
+  }
+
+  /* ---- */
+  @media (max-width: 600px) {
+    #skills > div {
+      flex-direction: row;
+    }
+  }
+</style>
