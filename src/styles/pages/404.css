@@ -1,0 +1,149 @@
+.page-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--border-light, rgba(255, 255, 255, 0.1));
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: floating 6s ease-in-out infinite;
+  max-width: 550px;
+  z-index: 10;
+}
+
+.illustration {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emoji {
+  font-size: 6rem;
+  z-index: 2;
+  animation: hover-ufo 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px var(--chart-0, #88f));
+  margin-bottom: -1rem;
+  display: block;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, var(--chart-0, #7aa2f7), var(--chart-2, #bb9af7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--primary, #fff);
+}
+
+p {
+  color: var(--secondary-text-clr, #bbb);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-size: 1.15rem;
+}
+
+.action-btn {
+  transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+.action-btn :global(a) {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-clr, #7aa2f7);
+  color: var(--base-clr, #111);
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px var(--ring-alpha, rgba(120, 160, 250, 0.3));
+  transition: background-color 0.2s ease;
+}
+
+.action-btn :global(a:hover) {
+  background: var(--hover-clr, #5c8ff7);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hover-ufo {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(8deg);
+  }
+}
+
+/* Estrellas decorativas de fondo */
+.page-404::before,
+.page-404::after {
+  content: '✨';
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.6;
+  animation: twinkle 4s infinite alternate;
+  z-index: 1;
+}
+
+.page-404::before {
+  top: 25%;
+  left: 20%;
+  animation-delay: 0.3s;
+  font-size: 1.8rem;
+  filter: hue-rotate(45deg);
+}
+
+.page-404::after {
+  top: 65%;
+  right: 20%;
+  animation-delay: 1.2s;
+  font-size: 2.2rem;
+  filter: hue-rotate(-45deg);
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(0deg);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.2) rotate(20deg);
+  }
+}

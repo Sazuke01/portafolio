@@ -1,0 +1,25 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import Link from 'src/components/ui/Link.astro';
+
+import 'src/styles/pages/404.css';
+---
+
+<Layout>
+  <main class="page-404">
+    <div class="content">
+      <div class="illustration">
+        <span class="emoji">🛸</span>
+        <h1 class="glitch" data-text="404">404</h1>
+      </div>
+      <h2>¡Ups! Página no encontrada</h2>
+      <p>Parece que has viajado a un enlace roto o esta página ya no existe en este universo.</p>
+
+      <div class="action-btn">
+        <Link href="/"> Volver al Inicio </Link>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style></style>
