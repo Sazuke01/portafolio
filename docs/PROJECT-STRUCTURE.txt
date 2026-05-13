@@ -1,0 +1,152 @@
+portafolio
+|   astro.config.mjs
+|   LICENSE
+|   package-lock.json
+|   package.json
+|   README.md
+|   tsconfig.json
+|   
++---docs
+|   |   PROJECT-STRUCTURE.txt
+|   
++---public
+|   |   favicon.ico
+|   |   favicon.svg
+|   |   preview.png
+|   |   
+|   +---data
+|   |   |   apps.json
+|   |   |   art.json
+|   |   |   conocimientos.json
+|   |   |   contactos.json
+|   |   |   projects.json
+|   |   |   skills.json
+|   |   |   
+|   |   \---cv
+|   |       |   mi-cv.html
+|   |   
+|   \---images
+|       |   
+|       +---arte
+|       |   |   arte1.png
+|       |   |   arte2.png
+|       |   |   arte3.png
+|       |   
+|       \---logo
+|           |   basic-s-robot.svg
+|           |   basic-s.svg
+|           |   rombo-s-logo.svg
+|   
+\---src
+    |   
+    +---assets
+    |   |   background.svg
+    |   |   
+    |   +---background
+    |   |   |   bg-gradient-blobs.svg
+    |   |   |   night-stars-moon.svg
+    |   |   
+    |   +---icons
+    |   |   |   curriculum-vitae.svg
+    |   |   |   github.svg
+    |   |   |   linkedin.svg
+    |   |   |   
+    |   |   \---24dp
+    |   |       |   add.svg
+    |   |       |   add_box.svg
+    |   |       |   apk_install.svg
+    |   |       |   browser_updated.svg
+    |   |       |   brush.svg
+    |   |       |   cancel.svg
+    |   |       |   check.svg
+    |   |       |   close.svg
+    |   |       |   dark_mode.svg
+    |   |       |   download_for_offline.svg
+    |   |       |   folder.svg
+    |   |       |   folder_open.svg
+    |   |       |   group.svg
+    |   |       |   home.svg
+    |   |       |   keyboard_arrow_down.svg
+    |   |       |   keyboard_arrow_up.svg
+    |   |       |   keyboard_double_arrow_left.svg
+    |   |       |   light_mode.svg
+    |   |       |   menu.svg
+    |   |       |   night.svg
+    |   |       |   palette.svg
+    |   |       |   person.svg
+    |   |       |   school.svg
+    |   |       |   settings.svg
+    |   |       |   shop_two.svg
+    |   |       |   shopping_bag.svg
+    |   |       |   sunny.svg
+    |   |       |   toggle_off.svg
+    |   |       |   toggle_on.svg
+    |   |       |   wb_sunny.svg
+    |   |   
+    |   \---logo
+    |       |   basic-s-robot.svg
+    |       |   basic-s.svg
+    |       |   favicon.svg
+    |       |   rombo-s-logo.svg
+    |   
+    +---components
+    |   |   MyCV.astro
+    |   |   Sidebar.astro
+    |   |   
+    |   +---info-loaders
+    |   |   |   AppsList.astro
+    |   |   |   ArtList.astro
+    |   |   |   Conocimientos.astro
+    |   |   |   ContactsList.astro
+    |   |   |   ProjectsList.astro
+    |   |   |   SkillsList.astro
+    |   |   |   
+    |   |   +---styles
+    |   |   |   |   conocimientos.css
+    |   |   |   |   lists.css
+    |   |   |   
+    |   |   \---utils
+    |   |       |   dataLoader.ts
+    |   |       |   lists.ts
+    |   |   
+    |   \---ui
+    |       |   Footer.astro
+    |       |   Header.astro
+    |       |   Icon.astro
+    |   
+    +---layouts
+    |   |   Layout.astro
+    |   
+    +---pages
+    |   |   apps.astro
+    |   |   arte.astro
+    |   |   cv.astro
+    |   |   index.astro
+    |   |   proyectos.astro
+    |   
+    +---scripts
+    |   |   
+    |   +---components
+    |   |   |   sidebar.ts
+    |   |   
+    |   \---utils
+    |       |   sidebar.ts
+    |       |   theme.ts
+    |   
+    \---styles
+        |   global.css
+        |   media.css
+        |   style.css
+        |   theme.css
+        |   
+        +---content
+        |   |   main.css
+        |   |   sidebar.css
+        |   
+        +---media
+        |   |   body.css
+        |   |   main.css
+        |   |   sidebar.css
+        |   
+        \---pages
+            |   art.css
