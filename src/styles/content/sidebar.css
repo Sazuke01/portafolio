@@ -1,0 +1,154 @@
+#sidebar,
+#side-element {
+  /* position: sticky; */
+  /* align-self: start; */
+
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  width: 4rem;
+  height: 100vh;
+}
+
+#sidebar {
+  box-sizing: border-box;
+
+  width: 256px;
+  padding: 0.5rem 0.5rem 1rem;
+
+  z-index: 110;
+
+  /* ocultar para elementos que sobresalen */
+  transform: translateX(0);
+
+  transition: transform 0.5s ease;
+
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+/* Lista de elementos */
+#sidebar ul {
+  max-height: 100vh;
+
+  list-style: none;
+  scroll-behavior: smooth;
+
+  a,
+  button {
+    padding: 0.75rem;
+    height: 3rem;
+  }
+
+  hr {
+    margin-bottom: 0.45rem;
+    margin-top: 0.45rem;
+  }
+}
+
+/* Primer elemento */
+#sidebar > ul > li:first-child {
+  display: flex;
+  justify-content: flex-end;
+
+  color: var(--text-clr);
+}
+
+/* elementos generales */
+#sidebar a,
+#sidebar .dropdown-btn {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  border-radius: 0.5em;
+  gap: 1em;
+}
+
+#sidebar a span,
+#sidebar .dropdown-btn span {
+  flex-grow: 1;
+}
+
+/* Sub menu */
+#sidebar .sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+
+  > div {
+    overflow: hidden;
+  }
+
+  a {
+    padding-left: 2em;
+  }
+}
+
+#sidebar .sub-menu.show {
+  grid-template-rows: 1fr;
+}
+
+/* Botones */
+button {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+}
+
+.dropdown-btn {
+  width: 100%;
+
+  font: inherit;
+  text-align: left;
+
+  /* Icon, */
+  svg {
+    transition: 200ms ease;
+  }
+}
+
+#toggle-btn {
+  border-radius: 0.5em;
+  margin-right: auto;
+
+  /* Icon, */
+  svg {
+    transition: rotate 150ms ease;
+  }
+}
+
+/* Efectos de despliegue y pliegue de elementos de button toggle */
+/* .rotate Icon:last-child, */
+.rotate svg:last-child {
+  rotate: 180deg;
+}
+
+/* Modo plegado */
+#sidebar.close {
+  transform: translateX(75%);
+
+  span {
+    opacity: 0;
+    max-width: 0;
+  }
+
+  ul a,
+  ul li,
+  ul button {
+    width: 3rem;
+  }
+}
+
+#sidebar {
+  /* Icon, */
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
